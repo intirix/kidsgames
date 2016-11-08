@@ -5,6 +5,7 @@ Window {
     visible: true
     width: 640
     height: 480
+    visibility: "FullScreen"
     title: qsTr("Hello World")
 
     Trace {
