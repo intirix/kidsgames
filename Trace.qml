@@ -6,14 +6,26 @@ Rectangle {
 
     color: "#000000"
 
+    function randomLetter() {
+        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var rnum = Math.floor(Math.random() * chars.length);
+        var ch = chars.substring(rnum,rnum+1);
+        console.log("Choosing letter '"+ch+"', number "+rnum);
+        return ch;
+    }
+
     Text {
         id: textView
         color: "#ffffff"
-        text: "A"
+        text: "M"
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font {
             pixelSize: parent.height
+        }
+
+        Component.onCompleted: {
+            text = randomLetter();
         }
     }
 
