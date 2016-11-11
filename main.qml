@@ -9,9 +9,17 @@ ApplicationWindow {
     visibility: "FullScreen"
     title: qsTr("Hello World")
 
-    Trace {
-        width: 100
-        height: 100
+    StackView {
+        id: stack
+        initialItem: view
         anchors.fill: parent
+
+        Component {
+            id: view
+
+            Trace {
+                anchors.fill: parent
+            }
+        }
     }
 }
