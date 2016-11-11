@@ -4,5 +4,6 @@
         <file>MainForm.ui.qml</file>
         <file>Trace.qml</file>
         <file>restart.png</file>
+        <file>random.png</file>
     </qresource>
 </RCC>

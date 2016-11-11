@@ -24,7 +24,7 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font {
-            pixelSize: squareSize
+            pixelSize: squareSize * 9 / 10
         }
 
         Component.onCompleted: {
@@ -104,6 +104,7 @@ Rectangle {
     }
 
     Image {
+        id: restartButton
         source: "restart.png"
         width: buttonSize
         height: buttonSize
@@ -120,7 +121,21 @@ Rectangle {
                 canvas.requestPaint();
             }
         }
+    }
 
+    Image {
+        source: "random.png"
+        width: buttonSize
+        height: buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: restartButton.left
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                textView.text = randomLetter();
+            }
+        }
     }
 
 }
