@@ -72,7 +72,7 @@ Rectangle {
             onPressed: {
                 for (var i = 0; i < touchPoints.length; i++ ) {
                     var tp = touchPoints[ i ];
-                    var path = { 'color': "#FF0000", points: [ {'x':tp.x,'y':tp.y} ] };
+                    var path = { 'color': "#FF00FF", points: [ {'x':tp.x,'y':tp.y} ] };
                     canvas.strokes.push( path );
                     canvas.strokeMap[tp.pointId] = path;
                     console.log(tp.pointId + ": Started at ("+tp.x + ',' + tp.y+')');
