@@ -21,7 +21,7 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font {
-            pixelSize: parent.height
+            pixelSize: Math.min(parent.height,parent.width)
         }
 
         Component.onCompleted: {
