@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
         <file>Trace.qml</file>
+        <file>restart.png</file>
     </qresource>
 </RCC>

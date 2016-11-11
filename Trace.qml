@@ -4,6 +4,9 @@ Rectangle {
     id: rectangle1
     anchors.fill: parent
 
+    property int squareSize: Math.min(parent.height,parent.width)
+    property int buttonSize: squareSize / 16
+
     color: "#000000"
 
     function randomLetter() {
@@ -21,7 +24,7 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font {
-            pixelSize: Math.min(parent.height,parent.width)
+            pixelSize: squareSize
         }
 
         Component.onCompleted: {
@@ -98,6 +101,26 @@ Rectangle {
 
 
         }
+    }
+
+    Image {
+        source: "restart.png"
+        width: buttonSize
+        height: buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                console.log( "Clearing drawing" );
+                canvas.strokes = [];
+                canvas.strokeMap = {};
+                canvas.getContext("2d").clearRect ( 0,0 , canvas.width, canvas.height );
+                canvas.requestPaint();
+            }
+        }
+
     }
 
 }
