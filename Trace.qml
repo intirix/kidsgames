@@ -5,7 +5,7 @@ Rectangle {
     anchors.fill: parent
 
     property int squareSize: Math.min(parent.height,parent.width)
-    property int buttonSize: squareSize / 16
+    property int buttonSize: squareSize / 12
 
     color: "#000000"
 
