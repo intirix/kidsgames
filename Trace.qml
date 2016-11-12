@@ -1,8 +1,9 @@
 import QtQuick 2.7
 
 Rectangle {
-    id: rectangle1
+    id: page
     anchors.fill: parent
+    objectName: "Trace"
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize / 12
@@ -15,6 +16,10 @@ Rectangle {
         var ch = chars.substring(rnum,rnum+1);
         console.log("Choosing letter '"+ch+"', number "+rnum);
         return ch;
+    }
+
+    function setText(txt) {
+        textView.text = txt;
     }
 
     Text {
@@ -124,6 +129,7 @@ Rectangle {
     }
 
     Image {
+        id: randomButton
         source: "random.png"
         width: buttonSize
         height: buttonSize
@@ -134,6 +140,31 @@ Rectangle {
             anchors.fill: parent
             onClicked: {
                 textView.text = randomLetter();
+            }
+        }
+    }
+
+    Rectangle {
+        width: buttonSize
+        height: buttonSize
+
+        anchors.bottom: parent.bottom
+        anchors.right: randomButton.left
+        color: page.color
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "A"
+            color: textView.color
+            font {
+                pixelSize: buttonSize * 9 / 10
+            }
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                stack.push(Qt.resolvedUrl("TraceSelect.qml"))
             }
         }
     }

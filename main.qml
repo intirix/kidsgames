@@ -9,6 +9,9 @@ ApplicationWindow {
     visibility: "FullScreen"
     title: qsTr("Hello World")
 
+    property color themeBackgroundColor: "#000000"
+    property color themeForegroundColor: "#FFFFFF"
+
     StackView {
         id: stack
         initialItem: view
@@ -17,9 +20,7 @@ ApplicationWindow {
         Component {
             id: view
 
-            Trace {
-                anchors.fill: parent
-            }
+            Trace {}
         }
     }
 }

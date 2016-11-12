@@ -5,5 +5,7 @@
         <file>Trace.qml</file>
         <file>restart.png</file>
         <file>random.png</file>
+        <file>TraceSelect.qml</file>
+        <file>TraceCapitolLetterModel.qml</file>
     </qresource>
 </RCC>
