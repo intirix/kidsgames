@@ -1,7 +1,6 @@
 import QtQuick 2.7
 
 Rectangle {
-    anchors.fill: parent
     color: themeBackgroundColor
 
     property int squareSize: Math.min(parent.height,parent.width)

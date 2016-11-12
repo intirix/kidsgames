@@ -2,7 +2,6 @@ import QtQuick 2.7
 
 Rectangle {
     id: page
-    anchors.fill: parent
     objectName: "Trace"
 
     property int squareSize: Math.min(parent.height,parent.width)
