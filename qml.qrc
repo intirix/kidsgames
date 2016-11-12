@@ -7,5 +7,8 @@
         <file>random.png</file>
         <file>TraceSelect.qml</file>
         <file>TraceCapitolLetterModel.qml</file>
+        <file>ColorModel.qml</file>
+        <file>ColorSelect.qml</file>
+        <file>colors.png</file>
     </qresource>
 </RCC>

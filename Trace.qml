@@ -9,6 +9,8 @@ Rectangle {
 
     color: "#000000"
 
+    property color drawColor: "#FF00FF"
+
     function randomLetter() {
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         var rnum = Math.floor(Math.random() * chars.length);
@@ -19,6 +21,10 @@ Rectangle {
 
     function setText(txt) {
         textView.text = txt;
+    }
+
+    function setDrawColor(c) {
+        drawColor = c;
     }
 
     function clearLines() {
@@ -87,7 +93,7 @@ Rectangle {
             onPressed: {
                 for (var i = 0; i < touchPoints.length; i++ ) {
                     var tp = touchPoints[ i ];
-                    var path = { 'color': "#FF00FF", points: [ {'x':tp.x,'y':tp.y} ] };
+                    var path = { 'color': drawColor, points: [ {'x':tp.x,'y':tp.y} ] };
                     canvas.strokes.push( path );
                     canvas.strokeMap[tp.pointId] = path;
                     console.log(tp.pointId + ": Started at ("+tp.x + ',' + tp.y+')');
@@ -147,6 +153,7 @@ Rectangle {
     }
 
     Rectangle {
+        id: selectButton
         width: buttonSize
         height: buttonSize
 
@@ -170,5 +177,22 @@ Rectangle {
             }
         }
     }
+
+    Image {
+        id: colorButton
+        source: "colors.png"
+        width: buttonSize
+        height: buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: selectButton.left
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                stack.push(Qt.resolvedUrl("ColorSelect.qml"))
+            }
+        }
+    }
+
 
 }
