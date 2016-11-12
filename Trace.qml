@@ -22,6 +22,14 @@ Rectangle {
         textView.text = txt;
     }
 
+    function clearLines() {
+        console.log( "Clearing drawing" );
+        canvas.strokes = [];
+        canvas.strokeMap = {};
+        canvas.getContext("2d").clearRect ( 0,0 , canvas.width, canvas.height );
+        canvas.requestPaint();
+    }
+
     Text {
         id: textView
         color: "#ffffff"
@@ -118,13 +126,7 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: {
-                console.log( "Clearing drawing" );
-                canvas.strokes = [];
-                canvas.strokeMap = {};
-                canvas.getContext("2d").clearRect ( 0,0 , canvas.width, canvas.height );
-                canvas.requestPaint();
-            }
+            onClicked: clearLines();
         }
     }
 
@@ -139,6 +141,7 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
+                clearLines();
                 textView.text = randomLetter();
             }
         }

@@ -38,6 +38,7 @@ Rectangle {
                                     return 'Trace'===item.objectName;
                                 });
                                 traceItem.setText(gridItemText.text);
+                                traceItem.clearLines();
                             } catch (e) {
 
                             }
