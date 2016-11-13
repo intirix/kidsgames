@@ -6,6 +6,7 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize / 12
+    property int lineWidth: squareSize / 200
 
     color: "#000000"
 
@@ -78,12 +79,12 @@ Rectangle {
                         var event = strokeEvents[ i ];
                         // Draw a line
                         context.beginPath();
-                        context.lineWidth = 2;
+                        context.lineWidth = lineWidth;
                         context.moveTo(event.x1, event.y1);
                         context.strokeStyle = drawColor;
                         context.lineTo(event.x2, event.y2);
 
-                        console.log("Drawing line ["+parseInt(event.x1)+","+parseInt(event.y1)+"] -> ["+parseInt(event.x2)+","+parseInt(event.y2)+"]")
+                        console.log("Drawing line (width="+lineWidth+") ["+parseInt(event.x1)+","+parseInt(event.y1)+"] -> ["+parseInt(event.x2)+","+parseInt(event.y2)+"]")
                         context.stroke();
                     }
                     strokeEvents = [];
@@ -95,7 +96,7 @@ Rectangle {
                         if ( stroke.points.length > 1 ) {
                             // Draw a line
                             context.beginPath();
-                            context.lineWidth = 2;
+                            context.lineWidth = lineWidth;
                             context.moveTo(stroke.points[0].x, stroke.points[0].y);
                             context.strokeStyle = stroke.color;
                             for (var j = 1; j < stroke.points.length; j++) {
