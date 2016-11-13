@@ -53,7 +53,7 @@ Rectangle {
 
     Rectangle {
         width: parent.width
-        height: textView.height
+        height: parent.height
         color: "transparent"
 
 
@@ -186,7 +186,7 @@ Rectangle {
 
         anchors.bottom: parent.bottom
         anchors.right: randomButton.left
-        color: page.color
+        color: "transparent"
         Text {
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
