@@ -1,4 +1,5 @@
 import QtQuick 2.7
+import "qrc:/"
 
 Rectangle {
     id: page
@@ -117,7 +118,7 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                stack.push(Qt.resolvedUrl("ColorSelect.qml"))
+                stack.push(Qt.resolvedUrl("/ColorSelect.qml"))
             }
         }
     }

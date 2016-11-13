@@ -2,9 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
-        <file>Trace.qml</file>
-        <file>TraceSelect.qml</file>
-        <file>TraceCapitolLetterModel.qml</file>
         <file>ColorModel.qml</file>
         <file>ColorSelect.qml</file>
         <file>FreeDraw.qml</file>
@@ -13,5 +10,10 @@
         <file alias="restart.png">images/restart.png</file>
         <file alias="random.png">images/random.png</file>
         <file alias="colors.png">images/colors.png</file>
+    </qresource>
+    <qresource prefix="/trace">
+        <file alias="Trace.qml">trace/Trace.qml</file>
+        <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
+        <file alias="TraceCapitolLetterModel.qml">trace/TraceCapitolLetterModel.qml</file>
     </qresource>
 </RCC>
