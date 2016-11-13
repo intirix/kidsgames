@@ -10,5 +10,6 @@
         <file>ColorModel.qml</file>
         <file>ColorSelect.qml</file>
         <file>colors.png</file>
+        <file>FreeDraw.qml</file>
     </qresource>
 </RCC>
