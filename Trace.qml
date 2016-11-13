@@ -51,7 +51,7 @@ Rectangle {
 
     Image {
         id: restartButton
-        source: "restart.png"
+        source: "/images/restart.png"
         width: buttonSize
         height: buttonSize
         anchors.bottom: parent.bottom
@@ -65,7 +65,7 @@ Rectangle {
 
     Image {
         id: randomButton
-        source: "random.png"
+        source: "/images/random.png"
         width: buttonSize
         height: buttonSize
         anchors.bottom: parent.bottom
@@ -108,7 +108,7 @@ Rectangle {
 
     Image {
         id: colorButton
-        source: "colors.png"
+        source: "/images/colors.png"
         width: buttonSize
         height: buttonSize
         anchors.bottom: parent.bottom
