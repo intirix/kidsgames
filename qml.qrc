@@ -10,6 +10,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="back.png">images/back.png</file>
+        <file alias="exit.png">images/exit.png</file>
         <file alias="home.png">images/home.png</file>
         <file alias="restart.png">images/restart.png</file>
         <file alias="random.png">images/random.png</file>
@@ -27,5 +28,6 @@
     </qresource>
     <qresource prefix="/components">
         <file alias="BackButton.qml">components/BackButton.qml</file>
+        <file alias="ExitButton.qml">components/ExitButton.qml</file>
     </qresource>
 </RCC>
