@@ -5,15 +5,22 @@
         <file>ColorModel.qml</file>
         <file>ColorSelect.qml</file>
         <file>FreeDraw.qml</file>
+        <file>AppModel.qml</file>
+        <file>Home.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="restart.png">images/restart.png</file>
         <file alias="random.png">images/random.png</file>
         <file alias="colors.png">images/colors.png</file>
+        <file alias="pen-write.png">images/pen-write.png</file>
+        <file alias="pen-draw.png">images/pen-draw.png</file>
     </qresource>
     <qresource prefix="/trace">
         <file alias="Trace.qml">trace/Trace.qml</file>
         <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
         <file alias="TraceCapitolLetterModel.qml">trace/TraceCapitolLetterModel.qml</file>
+    </qresource>
+    <qresource prefix="/draw">
+        <file alias="DrawPage.qml">draw/DrawPage.qml</file>
     </qresource>
 </RCC>

@@ -10,3 +10,11 @@ colors.png
 http://www.iconarchive.com/show/trainee-icons-by-emey87/Colours-rgb-icon.html
 Artist: emey87
 License: CC Attribution-No Derivative 4.0
+
+pen-write.png
+http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/pen-icon.html
+http://graphicloads.com/
+
+pen-draw.png
+http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Pen-icon.html
+http://graphicloads.com/
