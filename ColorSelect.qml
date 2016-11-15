@@ -31,7 +31,7 @@ Rectangle {
                         onClicked: {
                             try {
                                 var traceItem = stack.find(function(item,index){
-                                    return 'Trace'===item.objectName;
+                                    return item.setDrawColor!==undefined;
                                 });
                                 traceItem.setDrawColor(gridItemCircle.color);
                                 traceItem.clearLines();
