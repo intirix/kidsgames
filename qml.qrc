@@ -26,6 +26,6 @@
         <file alias="DrawPage.qml">draw/DrawPage.qml</file>
     </qresource>
     <qresource prefix="/components">
-        <file>BackButton.qml</file>
+        <file alias="BackButton.qml">components/BackButton.qml</file>
     </qresource>
 </RCC>
