@@ -1,5 +1,4 @@
 import QtQuick 2.7
-import "qrc:/"
 import "qrc:/components"
 
 Rectangle {
@@ -53,7 +52,7 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                stack.push(Qt.resolvedUrl("/ColorSelect.qml"))
+                stack.push(Qt.resolvedUrl("/components/ColorSelect.qml"))
             }
         }
     }

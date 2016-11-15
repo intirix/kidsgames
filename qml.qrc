@@ -2,9 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
-        <file>ColorModel.qml</file>
-        <file>ColorSelect.qml</file>
-        <file>FreeDraw.qml</file>
         <file>AppModel.qml</file>
         <file>Home.qml</file>
     </qresource>
@@ -29,5 +26,8 @@
     <qresource prefix="/components">
         <file alias="BackButton.qml">components/BackButton.qml</file>
         <file alias="ExitButton.qml">components/ExitButton.qml</file>
+        <file alias="ColorModel.qml">components/ColorModel.qml</file>
+        <file alias="ColorSelect.qml">components/ColorSelect.qml</file>
+        <file alias="FreeDraw.qml">components/FreeDraw.qml</file>
     </qresource>
 </RCC>
