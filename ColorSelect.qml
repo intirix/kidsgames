@@ -1,10 +1,16 @@
 import QtQuick 2.7
+import "qrc:/components"
 
 Rectangle {
     color: themeBackgroundColor
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize/4
+
+    BackButton {
+        id: backButton
+        stackRef: stack
+    }
 
     Component {
         id: gridDelegate
@@ -49,8 +55,9 @@ Rectangle {
     }
 
     GridView {
+        anchors.top: backButton.bottom
+        anchors.bottom: parent.bottom
         width: parent.width
-        height: parent.height
 
         cellHeight: buttonSize
         cellWidth: buttonSize

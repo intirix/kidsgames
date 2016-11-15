@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import "qrc:/"
+import "qrc:/components"
 
 Rectangle {
     id: page
@@ -48,6 +49,10 @@ Rectangle {
     FreeDraw {
         id: freeDraw
         lineWidth: squareSize / 200
+    }
+
+    BackButton {
+        stackRef: stack
     }
 
     Image {

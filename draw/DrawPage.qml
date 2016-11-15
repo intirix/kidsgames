@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import "qrc:/"
+import "qrc:/components"
 
 Rectangle {
     id: page
@@ -23,6 +24,10 @@ Rectangle {
         lineWidth: squareSize / 200
     }
 
+    BackButton {
+        stackRef: stack
+    }
+
     Image {
         id: restartButton
         source: "/images/restart.png"
@@ -33,7 +38,7 @@ Rectangle {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: freeDraw.clearLines();
+            onClicked: clearLines();
         }
     }
 
