@@ -26,3 +26,7 @@ http://graphicloads.com/
 home.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Home-icon.html
 http://graphicloads.com/
+
+exit.png
+http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Power-icon.html
+http://graphicloads.com/
