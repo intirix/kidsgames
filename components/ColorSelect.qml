@@ -6,6 +6,7 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize/4
+    property int buttonWidth: buttonSize * 11 / 10
 
     BackButton {
         id: backButton
@@ -20,14 +21,16 @@ Rectangle {
             Column {
                 Rectangle {
 
-                    width: buttonSize
-                    height: buttonSize
+                    width: buttonWidth
+                    height: buttonWidth
                     color: themeBackgroundColor
 
                     Rectangle {
                         id: gridItemCircle
-                        width: parent.width
-                        height: parent.height
+                        width: buttonSize
+                        height: buttonSize
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
                         radius: width * 0.5
                         color: selectColor
                     }
@@ -59,8 +62,8 @@ Rectangle {
         anchors.bottom: parent.bottom
         width: parent.width
 
-        cellHeight: buttonSize
-        cellWidth: buttonSize
+        cellHeight: buttonWidth
+        cellWidth: buttonWidth
 
         model: ColorModel {}
         delegate: gridDelegate
