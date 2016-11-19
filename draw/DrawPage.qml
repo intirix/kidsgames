@@ -52,7 +52,7 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                stack.push(Qt.resolvedUrl("/components/ColorSelect.qml"))
+                stack.push({item:Qt.resolvedUrl("/components/ColorSelect.qml"),properties: {clearOnChange:false}})
             }
         }
     }

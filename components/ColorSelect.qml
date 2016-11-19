@@ -8,6 +8,7 @@ Rectangle {
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize/4
     property int buttonWidth: buttonSize * 11 / 10
+    property bool clearOnChange: true
 
     BackButton {
         id: backButton
@@ -44,7 +45,9 @@ Rectangle {
                                     return item.setDrawColor!==undefined;
                                 });
                                 traceItem.setDrawColor(gridItemCircle.color);
-                                traceItem.clearLines();
+                                if (clearOnChange) {
+                                    traceItem.clearLines();
+                                }
                             } catch (e) {
 
                             }
