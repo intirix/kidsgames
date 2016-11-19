@@ -30,4 +30,8 @@
         <file alias="ColorSelect.qml">components/ColorSelect.qml</file>
         <file alias="FreeDraw.qml">components/FreeDraw.qml</file>
     </qresource>
+    <qresource prefix="/colorSoundBoard">
+        <file>ColorSoundBoardPage.qml</file>
+        <file>ColorSoundModel.qml</file>
+    </qresource>
 </RCC>

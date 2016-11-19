@@ -12,4 +12,9 @@ ListModel {
         appIcon: "/images/pen-draw.png"
         appUrl: "qrc:/draw/DrawPage.qml"
     }
+    ListElement {
+        appName: "Color Sound Board"
+        appIcon: "/images/colors.png"
+        appUrl: "qrc:/colorSoundBoard/ColorSoundBoardPage.qml"
+    }
 }
