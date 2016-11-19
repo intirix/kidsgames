@@ -7,19 +7,20 @@ ListModel {
         selectColor: "#FF0000"
     }
 
-    // Green
+    // Yellow
     ListElement {
-        selectColor: "#00FF00"
+        selectColor: "#FFFF00"
     }
+
 
     // Blue
     ListElement {
         selectColor: "#0000FF"
     }
 
-    // Purple
+    // Brown
     ListElement {
-        selectColor: "#9400D3"
+        selectColor: "#AF593E"
     }
 
     // Orange
@@ -27,9 +28,14 @@ ListModel {
         selectColor: "#FFA500"
     }
 
-    // Yellow
+    // Green
     ListElement {
-        selectColor: "#FFFF00"
+        selectColor: "#00FF00"
+    }
+
+    // Purple
+    ListElement {
+        selectColor: "#9400D3"
     }
 
     // Pink

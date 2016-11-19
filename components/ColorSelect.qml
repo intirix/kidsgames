@@ -2,6 +2,7 @@ import QtQuick 2.7
 import "qrc:/components"
 
 Rectangle {
+    id: page
     color: themeBackgroundColor
 
     property int squareSize: Math.min(parent.height,parent.width)
@@ -23,7 +24,7 @@ Rectangle {
 
                     width: buttonWidth
                     height: buttonWidth
-                    color: themeBackgroundColor
+                    color: "transparent"
 
                     Rectangle {
                         id: gridItemCircle
@@ -60,7 +61,10 @@ Rectangle {
     GridView {
         anchors.top: backButton.bottom
         anchors.bottom: parent.bottom
-        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+        // set the width to match the max number of cells wide
+        width: Math.floor(page.parent.width / buttonWidth)*buttonWidth
+
 
         cellHeight: buttonWidth
         cellWidth: buttonWidth

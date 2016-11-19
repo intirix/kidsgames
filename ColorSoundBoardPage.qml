@@ -60,7 +60,10 @@ Rectangle {
     GridView {
         anchors.top: backButton.bottom
         anchors.bottom: parent.bottom
-        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        // set the width to match the max number of cells wide
+        width: Math.floor(page.parent.width / buttonWidth)*buttonWidth
 
         cellHeight: buttonWidth
         cellWidth: buttonWidth
