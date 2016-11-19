@@ -1,3 +1,6 @@
+app-*.png
+http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Degree-icon.html
+http://graphicloads.com/
 
 restart.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Arrow-reload-5-icon.html
