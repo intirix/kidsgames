@@ -9,6 +9,8 @@ Rectangle {
     property int buttonSize: squareSize/3
     property int buttonWidth: buttonSize * 11 / 10
 
+    property var lastSelected: null
+
     BackButton {
         id: backButton
         stackRef: stack
@@ -38,12 +40,19 @@ Rectangle {
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                        }
-
                         onPressed: {
+                            // Just in case the last border wasn't removed
+                            if (lastSelected) {
+                                lastSelected.border.width = 0
+                            }
+
                             page.color = selectColor
                             gridItemCircle.border.width = 10
+
+                            // multi-touch screens could cause onReleased to be skipped
+                            // this means the border doesn't get removed
+                            // save this item for later so we can remove the border
+                            lastSelected = gridItemCircle
                         }
 
                         onReleased: {
