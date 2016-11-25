@@ -34,4 +34,11 @@
         <file>ColorSoundBoardPage.qml</file>
         <file>ColorSoundModel.qml</file>
     </qresource>
+    <qresource prefix="/speech">
+        <file alias="red.ogg">speech/red.ogg</file>
+        <file alias="blank.ogg">speech/blank.ogg</file>
+        <file alias="blue.ogg">speech/blue.ogg</file>
+        <file alias="orange.ogg">speech/orange.ogg</file>
+        <file alias="yellow.ogg">speech/yellow.ogg</file>
+    </qresource>
 </RCC>

@@ -5,17 +5,20 @@ ListModel {
     // Red
     ListElement {
         selectColor: "#FF0000"
+        speechAudio: ":/speech/red.ogg"
     }
 
     // Yellow
     ListElement {
         selectColor: "#FFFF00"
+        speechAudio: ":/speech/yellow.ogg"
     }
 
 
     // Blue
     ListElement {
         selectColor: "#0000FF"
+        speechAudio: ":/speech/blue.ogg"
     }
 
     // Brown
@@ -26,6 +29,7 @@ ListModel {
     // Orange
     ListElement {
         selectColor: "#FFA500"
+        speechAudio: ":/speech/orange.ogg"
     }
 
     // Green

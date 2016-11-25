@@ -1,5 +1,7 @@
 import QtQuick 2.7
+import QtMultimedia 5.7
 import "qrc:/components"
+import KidGames 1.0
 
 Rectangle {
     id: page
@@ -15,6 +17,7 @@ Rectangle {
         id: backButton
         stackRef: stack
     }
+
 
     Component {
         id: gridDelegate
@@ -38,6 +41,17 @@ Rectangle {
                         color: selectColor
                     }
 
+                    QrcCache {
+                        id: soundCache
+                        source: speechAudio
+                    }
+
+                    Audio {
+                        id: speechClip
+                        source: "file:"+soundCache.path
+                    }
+
+
                     MouseArea {
                         anchors.fill: parent
                         onPressed: {
@@ -53,6 +67,8 @@ Rectangle {
                             // this means the border doesn't get removed
                             // save this item for later so we can remove the border
                             lastSelected = gridItemCircle
+
+                            speechClip.play();
                         }
 
                         onReleased: {
