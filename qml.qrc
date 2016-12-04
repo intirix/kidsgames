@@ -40,5 +40,10 @@
         <file alias="blue.ogg">speech/blue.ogg</file>
         <file alias="orange.ogg">speech/orange.ogg</file>
         <file alias="yellow.ogg">speech/yellow.ogg</file>
+        <file alias="green.ogg">speech/green.ogg</file>
+        <file alias="brown.ogg">speech/brown.ogg</file>
+        <file alias="purple.ogg">speech/purple.ogg</file>
+        <file alias="pink.ogg">speech/pink.ogg</file>
+        <file alias="goodjob.ogg">speech/goodjob.ogg</file>
     </qresource>
 </RCC>

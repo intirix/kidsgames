@@ -24,6 +24,7 @@ ListModel {
     // Brown
     ListElement {
         selectColor: "#AF593E"
+        speechAudio: ":/speech/brown.ogg"
     }
 
     // Orange
@@ -35,16 +36,19 @@ ListModel {
     // Green
     ListElement {
         selectColor: "#00FF00"
+        speechAudio: ":/speech/green.ogg"
     }
 
     // Purple
     ListElement {
         selectColor: "#9400D3"
+        speechAudio: ":/speech/purple.ogg"
     }
 
     // Pink
     ListElement {
         selectColor: "#FF69B4"
+        speechAudio: ":/speech/pink.ogg"
     }
 
 }
