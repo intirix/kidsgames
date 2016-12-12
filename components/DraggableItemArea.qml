@@ -7,7 +7,7 @@ MultiPointTouchArea {
     property var items: []
 
     function addItem(item) {
-        items.append(item);
+        items.push(item);
     }
 
     onPressed: {
@@ -25,14 +25,21 @@ MultiPointTouchArea {
                     var canvasX = parseInt(tp.x - coords.x);
                     var canvasY = parseInt(tp.y - coords.y);
                     console.log("item "+canvasX+"x"+canvasY);
-                    if (sprite1.isHit(canvasX, canvasY)) {
+                    if (sprite.isHit(canvasX, canvasY)) {
                         console.log("HIT");
 
+                        var obj = sprite.getReference();
                         tracked[tp.pointId] = {
-                            sprite: sprite1,
+                            sprite: obj,
                             offsetX: canvasX,
                             offsetY: canvasY
                         };
+
+                        // if we cloned the item, we need to add it as a trackable item
+                        if (sprite.cloneItem) {
+                            addItem(obj);
+                        }
+
                         return;
                     }
                 }

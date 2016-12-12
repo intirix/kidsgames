@@ -48,5 +48,10 @@ Christmas Tree
 tree1.png
 https://openclipart.org/detail/28555/sapin01
 
+red_ball.png
+https://openclipart.org/detail/227392/patterned-bauble-6-red
+
+purple_ball.png
+https://openclipart.org/detail/226753/plain-bauble-14
 
 

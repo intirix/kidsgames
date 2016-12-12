@@ -1,15 +1,29 @@
 import QtQuick 2.0
 
 Rectangle {
+    id: me
 
     property var size: 200
     property url source: "qrc:/images/animals/whale.png"
-    x: 10
-    y: 20
+    property bool cloneItem: false
+    property var cloneParent: parent
+
+    color: "transparent"
+    width: size
+    height: size
 
     function isHit(x,y) {
         var data = canvas.getContext("2d").getImageData(x, y, 1, 1)
         return data.data[3]>0;
+    }
+
+    function getReference() {
+        if (cloneItem) {
+            var component = Qt.createComponent("DraggableItem.qml");
+            return component.createObject(cloneParent, {"size": size, "source": source, "x": x, "y": y, "cloneItem": false});
+        } else {
+            return me
+        }
     }
 
     Image {
