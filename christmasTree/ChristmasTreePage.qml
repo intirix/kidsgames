@@ -11,7 +11,7 @@ Rectangle {
 
     Image {
         height: treeSize
-        source: "qrc:/christmasTree/tree1.png"
+        source: "tree1.png"
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
     }
@@ -22,14 +22,14 @@ Rectangle {
 
 
         DraggableItem {
-            id: sprite1
+            area: area
             source: "red_ball.png"
             size: ballSize
             cloneItem: true
             cloneParent: page
         }
         DraggableItem {
-            id: sprite2
+            area: area
             source: "purple_ball.png"
             size: ballSize
             cloneItem: true
@@ -39,7 +39,7 @@ Rectangle {
 
 
     DraggableItemArea {
-        items: [ sprite1, sprite2 ]
+        id: area
     }
 
     BackButton {

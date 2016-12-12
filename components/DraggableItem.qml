@@ -7,10 +7,19 @@ Rectangle {
     property url source: "qrc:/images/animals/whale.png"
     property bool cloneItem: false
     property var cloneParent: parent
+    property var area: null
 
     color: "transparent"
     width: size
     height: size
+
+    Component.onCompleted: {
+        // if the item was declared with an area to belong to,
+        // add the item to the area
+        if (area!==null) {
+            area.addItem(me);
+        }
+    }
 
     function isHit(x,y) {
         var data = canvas.getContext("2d").getImageData(x, y, 1, 1)
