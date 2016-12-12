@@ -33,6 +33,7 @@
         <file alias="ColorSelect.qml">components/ColorSelect.qml</file>
         <file alias="FreeDraw.qml">components/FreeDraw.qml</file>
         <file alias="DraggableItem.qml">components/DraggableItem.qml</file>
+        <file alias="DraggableItemArea.qml">components/DraggableItemArea.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>
