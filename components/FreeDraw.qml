@@ -1,4 +1,5 @@
 import QtQuick 2.7
+import QtQuick.Window 2.2
 
 Rectangle {
     width: parent.width
@@ -7,6 +8,14 @@ Rectangle {
 
     property int lineWidth: 2
     property color drawColor: "#FF00FF"
+
+    property bool isPortrait: Screen.primaryOrientation === Qt.PortraitOrientation || Screen.primaryOrientation === Qt.InvertedPortraitOrientation
+
+    onIsPortraitChanged: {
+        clearLines();
+    }
+
+
 
     function setDrawColor(c) {
         drawColor = c;
@@ -19,7 +28,6 @@ Rectangle {
         canvas.getContext("2d").clearRect ( 0,0 , canvas.width, canvas.height );
         canvas.requestPaint();
     }
-
 
     Canvas {
         id: canvas
