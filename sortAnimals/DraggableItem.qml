@@ -4,8 +4,6 @@ Rectangle {
 
     property var size: 200
     property url source: "qrc:/images/animals/whale.png"
-//    width: size
-//    height: size
     x: 10
     y: 20
 
@@ -18,10 +16,6 @@ Rectangle {
         id: refImage
         source: parent.source
         visible: false
-
-        //Component.onCompleted: {
-        //    canvas.requestPaint();
-        //}
     }
 
     Canvas {
@@ -39,9 +33,6 @@ Rectangle {
         onPaint: {
             var ctx = getContext("2d");
             ctx.drawImage(source,0,0, xScale, yScale);
-//            console.log(width+"x"+height);
-//            console.log(refImage.width+"x"+refImage.height);
-//            console.log(xScale+" x "+yScale);
         }
 
         onImageLoaded: {

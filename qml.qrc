@@ -39,7 +39,7 @@
     </qresource>
     <qresource prefix="/sortAnimals">
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
-        <file alias="AnimalSprite.qml">sortAnimals/AnimalSprite.qml</file>
+        <file alias="DraggableItem.qml">sortAnimals/DraggableItem.qml</file>
     </qresource>
     <qresource prefix="/speech">
         <file alias="red.ogg">speech/red.ogg</file>

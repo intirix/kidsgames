@@ -6,7 +6,7 @@ Rectangle {
     property int squareSize: Math.min(parent.height,parent.width)
     property int baseAnimalSize: squareSize/4
 
-    AnimalSprite {
+    DraggableItem {
         id: sprite1
         size: baseAnimalSize
     }
