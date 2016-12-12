@@ -1,4 +1,5 @@
 import QtQuick 2.7
+import "qrc:/components"
 
 Rectangle {
     color: "#000000"

@@ -32,6 +32,7 @@
         <file alias="ColorModel.qml">components/ColorModel.qml</file>
         <file alias="ColorSelect.qml">components/ColorSelect.qml</file>
         <file alias="FreeDraw.qml">components/FreeDraw.qml</file>
+        <file alias="DraggableItem.qml">components/DraggableItem.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>
@@ -39,7 +40,6 @@
     </qresource>
     <qresource prefix="/sortAnimals">
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
-        <file alias="DraggableItem.qml">sortAnimals/DraggableItem.qml</file>
     </qresource>
     <qresource prefix="/speech">
         <file alias="red.ogg">speech/red.ogg</file>
