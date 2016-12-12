@@ -17,4 +17,9 @@ ListModel {
         appIcon: "/images/colors.png"
         appUrl: "qrc:/colorSoundBoard/ColorSoundBoardPage.qml"
     }
+    ListElement {
+        appName: "Sort Animals"
+        appIcon: "/images/colors.png"
+        appUrl: "qrc:/sortAnimals/SortAnimalsPage.qml"
+    }
 }

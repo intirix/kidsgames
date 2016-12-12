@@ -15,6 +15,9 @@
         <file alias="pen-write.png">images/pen-write.png</file>
         <file alias="pen-draw.png">images/pen-draw.png</file>
     </qresource>
+    <qresource prefix="/images/animals">
+        <file alias="whale.png">images/animals/whale.png</file>
+    </qresource>
     <qresource prefix="/trace">
         <file alias="Trace.qml">trace/Trace.qml</file>
         <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
@@ -33,6 +36,10 @@
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>
         <file>ColorSoundModel.qml</file>
+    </qresource>
+    <qresource prefix="/sortAnimals">
+        <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
+        <file alias="AnimalSprite.qml">sortAnimals/AnimalSprite.qml</file>
     </qresource>
     <qresource prefix="/speech">
         <file alias="red.ogg">speech/red.ogg</file>
