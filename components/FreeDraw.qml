@@ -28,6 +28,9 @@ Rectangle {
 
         property var strokeEvents: []
 
+        renderStrategy: Canvas.Cooperative
+        renderTarget: Canvas.FramebufferObject
+
         width: parent.width
         height: parent.height
 
