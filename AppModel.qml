@@ -24,4 +24,9 @@ ListModel {
         appUrl: "qrc:/sortAnimals/SortAnimalsPage.qml"
     }
     */
+    ListElement {
+        appName: "Christmas Tree"
+        appIcon: "/images/colors.png"
+        appUrl: "qrc:/christmasTree/ChristmasTreePage.qml"
+    }
 }

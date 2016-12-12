@@ -42,6 +42,10 @@
     <qresource prefix="/sortAnimals">
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
     </qresource>
+    <qresource prefix="/christmasTree">
+        <file alias="ChristmasTreePage.qml">christmasTree/ChristmasTreePage.qml</file>
+        <file alias="tree1.png">christmasTree/tree1.png</file>
+    </qresource>
     <qresource prefix="/speech">
         <file alias="red.ogg">speech/red.ogg</file>
         <file alias="blank.ogg">speech/blank.ogg</file>
