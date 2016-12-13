@@ -19,6 +19,7 @@ Rectangle {
     Column {
         anchors.left: parent.left
         anchors.top: backButton.bottom
+        anchors.topMargin: ballSize/2
 
 
         DraggableItem {
@@ -31,6 +32,34 @@ Rectangle {
         DraggableItem {
             area: area
             source: "purple_ball.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+        DraggableItem {
+            area: area
+            source: "green_ball.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+        DraggableItem {
+            area: area
+            source: "gold_ball.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+        DraggableItem {
+            area: area
+            source: "blue_ball.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+        DraggableItem {
+            area: area
+            source: "pink_ball.png"
             size: ballSize
             cloneItem: true
             cloneParent: page

@@ -54,4 +54,16 @@ https://openclipart.org/detail/227392/patterned-bauble-6-red
 purple_ball.png
 https://openclipart.org/detail/226753/plain-bauble-14
 
+green_ball.png
+https://openclipart.org/detail/227393/patterned-bauble-6-green
+
+blue_ball.png
+https://openclipart.org/detail/227391/patterned-bauble-6-blue
+
+gold_ball.png
+https://openclipart.org/detail/226751/plain-bauble-12
+
+pink_ball.png
+https://openclipart.org/detail/226746/plain-bauble-7
+
 
