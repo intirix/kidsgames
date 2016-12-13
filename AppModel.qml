@@ -26,7 +26,7 @@ ListModel {
     */
     ListElement {
         appName: "Christmas Tree"
-        appIcon: "/images/colors.png"
+        appIcon: "/christmasTree/icon.png"
         appUrl: "qrc:/christmasTree/ChristmasTreePage.qml"
     }
 }
