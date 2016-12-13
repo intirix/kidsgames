@@ -45,11 +45,11 @@ https://openclipart.org/detail/18925/small-whale
 
 
 Christmas Tree
-tree1.png
+tree1.svg
 https://openclipart.org/detail/28555/sapin01
 
 icon.png
-Uses tree1.png
+Uses tree1.svg
 Render command: convert -background none icon.svg icon.png
 
 red_ball.png

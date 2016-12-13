@@ -11,7 +11,8 @@ Rectangle {
 
     Image {
         height: treeSize
-        source: "tree1.png"
+        width: treeSize * 1.2 // fatten the tree a bit
+        source: "tree1.svg"
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
     }

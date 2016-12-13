@@ -45,7 +45,7 @@
     <qresource prefix="/christmasTree">
         <file alias="ChristmasTreePage.qml">christmasTree/ChristmasTreePage.qml</file>
         <file alias="icon.png">christmasTree/icon.png</file>
-        <file alias="tree1.png">christmasTree/tree1.png</file>
+        <file alias="tree1.svg">christmasTree/tree1.svg</file>
         <file alias="red_ball.png">christmasTree/red_ball.png</file>
         <file alias="purple_ball.png">christmasTree/purple_ball.png</file>
         <file alias="green_ball.png">christmasTree/green_ball.png</file>
