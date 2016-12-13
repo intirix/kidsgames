@@ -8,13 +8,24 @@ Rectangle {
     property int baseAnimalSize: squareSize/4
 
     DraggableItem {
-        id: sprite1
         source: "qrc:/images/animals/whale.svg"
+        area: area
+        size: baseAnimalSize
+    }
+    DraggableItem {
+        source: "qrc:/images/animals/elephant.svg"
+        area: area
         size: baseAnimalSize
     }
 
     DraggableItemArea {
-        items: [ sprite1 ]
+        id: area
     }
+
+    BackButton {
+        id: backButton
+        stackRef: stack
+    }
+
 }
 

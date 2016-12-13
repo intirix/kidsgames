@@ -43,6 +43,8 @@ Animals
 whale.svg
 https://openclipart.org/detail/18925/small-whale
 
+elephant.svg
+https://openclipart.org/detail/17810/cartoon-elephant
 
 Christmas Tree
 tree1.svg

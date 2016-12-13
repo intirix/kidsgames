@@ -17,6 +17,7 @@
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>
+        <file alias="elephant.svg">images/animals/elephant.svg</file>
     </qresource>
     <qresource prefix="/trace">
         <file alias="Trace.qml">trace/Trace.qml</file>
