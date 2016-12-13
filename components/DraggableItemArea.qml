@@ -55,6 +55,9 @@ MultiPointTouchArea {
                 var obj = tracked[tp.pointId];
                 obj.sprite.x = tp.x - obj.offsetX;
                 obj.sprite.y = tp.y - obj.offsetY;
+
+                // make sure what you are dragging is visible
+                obj.sprite.visible = true;
             }
         }
     }

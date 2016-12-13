@@ -29,7 +29,13 @@ Rectangle {
     function getReference() {
         if (cloneItem) {
             var component = Qt.createComponent("DraggableItem.qml");
-            return component.createObject(cloneParent, {"size": size, "source": source, "x": x, "y": y, "cloneItem": false});
+            var obj = component.createObject(cloneParent, {"size": size, "source": source, "x": x, "y": y, "cloneItem": false});
+
+            // don't draw the clone until we drag it a bit
+            // this prevents a weird visual pop when first creating the item
+            // when the original is not absolutely positioned
+            obj.visible = false;
+            return obj;
         } else {
             return me
         }
