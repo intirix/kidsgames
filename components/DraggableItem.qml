@@ -4,7 +4,7 @@ Rectangle {
     id: me
 
     property var size: 200
-    property url source: "qrc:/images/animals/whale.png"
+    property url source: "qrc:/images/animals/whale.svg"
     property bool cloneItem: false
     property var cloneParent: parent
     property var area: null

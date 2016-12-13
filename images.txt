@@ -40,7 +40,7 @@ http://graphicloads.com/
 
 Animals
 
-whale.png
+whale.svg
 https://openclipart.org/detail/18925/small-whale
 
 

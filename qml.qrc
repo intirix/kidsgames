@@ -16,7 +16,7 @@
         <file alias="pen-draw.png">images/pen-draw.png</file>
     </qresource>
     <qresource prefix="/images/animals">
-        <file alias="whale.png">images/animals/whale.png</file>
+        <file alias="whale.svg">images/animals/whale.svg</file>
     </qresource>
     <qresource prefix="/trace">
         <file alias="Trace.qml">trace/Trace.qml</file>

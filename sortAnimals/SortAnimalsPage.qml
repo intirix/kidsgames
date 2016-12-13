@@ -9,6 +9,7 @@ Rectangle {
 
     DraggableItem {
         id: sprite1
+        source: "qrc:/images/animals/whale.svg"
         size: baseAnimalSize
     }
 
