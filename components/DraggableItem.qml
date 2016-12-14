@@ -41,6 +41,16 @@ Rectangle {
         }
     }
 
+    function moveToRandomPosition(minX, minY, maxX, maxY) {
+        var width = maxX - minY - size;
+        var height = maxY - minY - size;
+        var offsetX = Math.random() * width;
+        var offsetY = Math.random() * height;
+        me.x = parseInt(minX + offsetX);
+        me.y = parseInt(minY + offsetY);
+        console.log("Moving to random position between "+minX+"x"+minY+" and "+maxX+"x"+maxY+" (box "+width+"x"+height+") -> "+me.x+"x"+me.y);
+    }
+
     Image {
         id: refImage
         source: parent.source
