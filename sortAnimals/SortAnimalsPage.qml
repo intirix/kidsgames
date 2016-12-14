@@ -28,6 +28,14 @@ Rectangle {
             moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
         }
     }
+    DraggableItem {
+        source: "fish.svg"
+        area: area
+        size: baseAnimalSize
+        Component.onCompleted: {
+            moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
+        }
+    }
 
     DraggableItemArea {
         id: area

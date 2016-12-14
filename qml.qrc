@@ -42,6 +42,7 @@
     </qresource>
     <qresource prefix="/sortAnimals">
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
+        <file alias="fish.svg">sortAnimals/fish.svg</file>
     </qresource>
     <qresource prefix="/christmasTree">
         <file alias="ChristmasTreePage.qml">christmasTree/ChristmasTreePage.qml</file>

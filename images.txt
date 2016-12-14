@@ -46,6 +46,12 @@ https://openclipart.org/detail/18925/small-whale
 elephant.svg
 https://openclipart.org/detail/17810/cartoon-elephant
 
+
+Sorting Animals
+fish.svg
+https://openclipart.org/detail/263070/cartoon-fish-1
+
+
 Christmas Tree
 tree1.svg
 https://openclipart.org/detail/28555/sapin01
