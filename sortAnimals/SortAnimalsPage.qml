@@ -4,6 +4,13 @@ import "qrc:/components"
 Rectangle {
     color: "#000000"
 
+    Image {
+        source: "beach.svg"
+        anchors.fill: parent
+        fillMode: Image.PreserveAspectFit
+        //anchors.horizontalCenter: parent.horizontalCenter
+    }
+
     property int squareSize: Math.min(parent.height,parent.width)
     property int baseAnimalSize: squareSize/4
 
