@@ -35,6 +35,7 @@
         <file alias="FreeDraw.qml">components/FreeDraw.qml</file>
         <file alias="DraggableItem.qml">components/DraggableItem.qml</file>
         <file alias="DraggableItemArea.qml">components/DraggableItemArea.qml</file>
+        <file alias="DraggableItemDestination.qml">components/DraggableItemDestination.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>
