@@ -54,6 +54,10 @@ http://www.clipartbest.com/clipart-di7K87ki9
 fish.svg
 https://openclipart.org/detail/263070/cartoon-fish-1
 
+cow.svg
+https://openclipart.org/detail/48547/chewing-cow
+
+
 
 Christmas Tree
 tree1.svg

@@ -32,8 +32,10 @@ Rectangle {
     property var landList: [
         {
             "image": "qrc:/images/animals/elephant.svg"
+        },
+        {
+            "image": "cow.svg"
         }
-
     ]
 
     function handleDrop(item, list) {
