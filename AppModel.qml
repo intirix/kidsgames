@@ -19,7 +19,7 @@ ListModel {
     }
     ListElement {
         appName: "Sort Animals"
-        appIcon: "/images/colors.png"
+        appIcon: "/sortAnimals/icon.png"
         appUrl: "qrc:/sortAnimals/SortAnimalsPage.qml"
     }
     ListElement {

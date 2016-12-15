@@ -42,6 +42,7 @@
         <file>ColorSoundModel.qml</file>
     </qresource>
     <qresource prefix="/sortAnimals">
+        <file alias="icon.png">sortAnimals/icon.png</file>
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
         <file alias="fish.svg">sortAnimals/fish.svg</file>
         <file alias="cow.svg">sortAnimals/cow.svg</file>
