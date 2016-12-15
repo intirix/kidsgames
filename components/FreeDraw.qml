@@ -11,6 +11,11 @@ Rectangle {
 
     property bool isPortrait: Screen.primaryOrientation === Qt.PortraitOrientation || Screen.primaryOrientation === Qt.InvertedPortraitOrientation
 
+    // seed the max distance with 5% of the screen width
+    // this is a bit of a magic number that was based on experimentation
+    property real maxDistance: parent.width / 20
+    property var lastReleasePoint: null
+
     onIsPortraitChanged: {
         clearLines();
     }
@@ -91,12 +96,43 @@ Rectangle {
         height: parent.height
 
         onPressed: {
+            var path = {};
             for (var i = 0; i < touchPoints.length; i++ ) {
                 var tp = touchPoints[ i ];
-                var path = { 'color': drawColor, points: [ {'x':tp.x,'y':tp.y} ] };
-                canvas.strokes.push( path );
-                canvas.strokeMap[tp.pointId] = path;
-                console.log(tp.pointId + ": Started at ("+tp.x + ',' + tp.y+')');
+
+                var newPath = true;
+
+                // on my laptop, the screen isn't as sensitive as my son would like
+                // the capacative pens sometimes register a gap when drawing a line
+                // this code is designed to try and resume from the last ended path
+                // if it was just a gap from a capacative pen
+                if (maxDistance>0&&lastReleasePoint!==null) {
+                    var dx = tp.x - lastReleasePoint.x;
+                    var dy = tp.y - lastReleasePoint.y;
+                    var d = Math.sqrt(dx*dx+dy*dy);
+
+                    if (d<maxDistance) {
+                        newPath = false;
+                        path = { 'color': drawColor, points: [ {'x':lastReleasePoint.x,'y':lastReleasePoint.y} ] };
+                        canvas.strokes.push( path );
+                        canvas.strokeMap[tp.pointId] = path;
+
+                        canvas.strokeMap[tp.pointId].points.push({'x':tp.x,'y':tp.y});
+                        canvas.strokeEvents.push({'x1':lastReleasePoint.x,'y1':lastReleasePoint.y,'x2':tp.x,'y2':tp.y});
+                        console.log(tp.pointId + ": Resuming from ("+lastReleasePoint.x+','+lastReleasePoint.y+") at ("+tp.x + ',' + tp.y+') dist='+d+", maxDist="+maxDistance);
+
+                    }
+                }
+
+                if (newPath) {
+                    path = { 'color': drawColor, points: [ {'x':tp.x,'y':tp.y} ] };
+                    canvas.strokes.push( path );
+                    canvas.strokeMap[tp.pointId] = path;
+                    console.log(tp.pointId + ": Started at ("+tp.x + ',' + tp.y+')');
+
+                }
+
+
             }
 
         }
@@ -105,6 +141,14 @@ Rectangle {
             for (var i = 0; i < touchPoints.length; i++ ) {
                 var tp = touchPoints[ i ];
                 var lastPoint = canvas.strokeMap[tp.pointId].points[ canvas.strokeMap[tp.pointId].points.length - 1 ];
+
+                var dx = tp.x - lastPoint.x;
+                var dy = tp.y - lastPoint.y;
+                var d = Math.sqrt(dx*dx+dy*dy);
+                if (d>maxDistance) {
+                    maxDistance = d;
+                }
+
                 canvas.strokeMap[tp.pointId].points.push({'x':tp.x,'y':tp.y});
                 canvas.strokeEvents.push({'x1':lastPoint.x,'y1':lastPoint.y,'x2':tp.x,'y2':tp.y});
                 //console.log(tp.pointId + ": Moved from ("+tp.previousX + ',' + tp.previousY+") to ("+tp.x + ',' + tp.y+')');
@@ -115,6 +159,7 @@ Rectangle {
         onReleased: {
             for (var i = 0; i < touchPoints.length; i++ ) {
                 var tp = touchPoints[ i ];
+                lastReleasePoint = Qt.point(tp.x, tp.y);
                 console.log(tp.pointId + ": Finished at ("+tp.x + ',' + tp.y+')');
             }
         }
