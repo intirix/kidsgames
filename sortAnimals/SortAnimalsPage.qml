@@ -24,6 +24,9 @@ Rectangle {
             "image": "fish.svg"
         },
         {
+            "image": "shark.svg"
+        },
+        {
             "image": "qrc:/images/animals/whale.svg"
         }
 
