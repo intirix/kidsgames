@@ -61,6 +61,18 @@ https://openclipart.org/detail/263070/cartoon-fish-1
 cow.svg
 https://openclipart.org/detail/48547/chewing-cow
 
+shark.svg
+https://openclipart.org/detail/172430/shark-pure
+
+monkey.svg
+https://openclipart.org/detail/222385/cartoon-monkey
+
+dog.svg
+https://openclipart.org/detail/9235/puppy-cartoon
+
+giraffe.svg
+https://openclipart.org/detail/65611/giraffe
+
 
 
 Christmas Tree

@@ -38,6 +38,15 @@ Rectangle {
         },
         {
             "image": "cow.svg"
+        },
+        {
+            "image": "giraffe.svg"
+        },
+        {
+            "image": "dog.svg"
+        },
+        {
+            "image": "monkey.svg"
         }
     ]
 
