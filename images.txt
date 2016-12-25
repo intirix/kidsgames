@@ -70,6 +70,9 @@ https://openclipart.org/detail/222385/cartoon-monkey
 dog.svg
 https://openclipart.org/detail/9235/puppy-cartoon
 
+turtle.svg
+https://openclipart.org/detail/263082/cartoon-turtle-2
+
 giraffe.svg
 https://openclipart.org/detail/65611/giraffe
 

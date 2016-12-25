@@ -49,6 +49,7 @@
         <file alias="monkey.svg">sortAnimals/monkey.svg</file>
         <file alias="cow.svg">sortAnimals/cow.svg</file>
         <file alias="dog.svg">sortAnimals/dog.svg</file>
+        <file alias="turtle.svg">sortAnimals/turtle.svg</file>
         <file alias="giraffe.svg">sortAnimals/giraffe.svg</file>
         <file alias="beach.svg">sortAnimals/beach.svg</file>
     </qresource>
