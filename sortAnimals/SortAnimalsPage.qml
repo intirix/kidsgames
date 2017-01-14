@@ -49,9 +49,14 @@ Rectangle {
             "image": "dog.svg"
         },
         {
+            "image": "tiger.svg"
+        },
+        {
             "image": "monkey.svg"
         }
     ]
+
+    property var animals: []
 
     function handleDrop(item, list) {
         var matched = false;
@@ -105,6 +110,27 @@ Rectangle {
         stackRef: stack
     }
 
+    function restart() {
+        for (var i = 0; i < animals.length; i++) {
+            animals[ i ].moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
+            animals[ i ].visible = true;
+        }
+    }
+
+    Image {
+        id: restartButton
+        source: "/images/restart.png"
+        width: backButton.buttonSize
+        height: backButton.buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: restart();
+        }
+    }
+
     Component.onCompleted: {
         for (var i = 0; i < waterList.length; i++) {
             var animal = waterList[ i ];
@@ -112,6 +138,7 @@ Rectangle {
             var component = Qt.createComponent("qrc:/components/DraggableItem.qml");
             var obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
             obj.moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
+            animals.push(obj);
         }
         for (var i = 0; i < landList.length; i++) {
             var animal = landList[ i ];
@@ -119,6 +146,7 @@ Rectangle {
             var component = Qt.createComponent("qrc:/components/DraggableItem.qml");
             var obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
             obj.moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
+            animals.push(obj);
         }
     }
 }
