@@ -52,6 +52,9 @@ Rectangle {
             "image": "tiger.svg"
         },
         {
+            "image": "lion.svg"
+        },
+        {
             "image": "monkey.svg"
         }
     ]

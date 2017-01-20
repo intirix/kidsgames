@@ -73,6 +73,9 @@ https://openclipart.org/detail/9235/puppy-cartoon
 tiger.svg
 https://openclipart.org/detail/34831/architetto-tigre-04
 
+lion.svg
+https://openclipart.org/detail/31051/architetto-leone-01
+
 turtle.svg
 https://openclipart.org/detail/263082/cartoon-turtle-2
 
