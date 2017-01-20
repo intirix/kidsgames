@@ -76,6 +76,9 @@ https://openclipart.org/detail/34831/architetto-tigre-04
 lion.svg
 https://openclipart.org/detail/31051/architetto-leone-01
 
+octopus.svg
+https://openclipart.org/detail/64159/cartoon-octopus
+
 turtle.svg
 https://openclipart.org/detail/263082/cartoon-turtle-2
 
