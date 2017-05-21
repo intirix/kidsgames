@@ -85,6 +85,9 @@ https://openclipart.org/detail/263082/cartoon-turtle-2
 giraffe.svg
 https://openclipart.org/detail/65611/giraffe
 
+zebra.svg
+https://openclipart.org/detail/220641/zebra-coloured
+
 
 
 Christmas Tree

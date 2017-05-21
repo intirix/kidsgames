@@ -59,6 +59,9 @@ Rectangle {
         },
         {
             "image": "monkey.svg"
+        },
+        {
+            "image": "zebra.svg"
         }
     ]
 

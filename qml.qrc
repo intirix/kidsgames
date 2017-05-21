@@ -55,6 +55,7 @@
         <file alias="lion.svg">sortAnimals/lion.svg</file>
         <file alias="octopus.svg">sortAnimals/octopus.svg</file>
         <file alias="beach.svg">sortAnimals/beach.svg</file>
+        <file alias="zebra.svg">sortAnimals/zebra.svg</file>
     </qresource>
     <qresource prefix="/christmasTree">
         <file alias="ChristmasTreePage.qml">christmasTree/ChristmasTreePage.qml</file>
