@@ -88,6 +88,8 @@ https://openclipart.org/detail/65611/giraffe
 zebra.svg
 https://openclipart.org/detail/220641/zebra-coloured
 
+horse.svg
+https://openclipart.org/detail/2691/horse
 
 
 Christmas Tree

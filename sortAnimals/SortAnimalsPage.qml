@@ -62,6 +62,9 @@ Rectangle {
         },
         {
             "image": "zebra.svg"
+        },
+        {
+            "image": "horse.svg"
         }
     ]
 
