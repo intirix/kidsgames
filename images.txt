@@ -91,6 +91,9 @@ https://openclipart.org/detail/220641/zebra-coloured
 horse.svg
 https://openclipart.org/detail/2691/horse
 
+crocodile.svg
+https://openclipart.org/detail/215745/crocodile-coloured
+
 
 Christmas Tree
 tree1.svg

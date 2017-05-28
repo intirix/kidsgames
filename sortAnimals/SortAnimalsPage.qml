@@ -33,6 +33,9 @@ Rectangle {
             "image": "octopus.svg"
         },
         {
+            "image": "crocodile.svg"
+        },
+        {
             "image": "qrc:/images/animals/whale.svg"
         }
 
