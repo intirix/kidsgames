@@ -122,3 +122,28 @@ pink_ball.png
 https://openclipart.org/detail/226746/plain-bauble-7
 
 
+
+basketball-net.svg
+https://openclipart.org/detail/5451/basketball-rim
+
+backetball.svg
+https://openclipart.org/detail/184778/basketball
+
+soccerball.svg
+https://openclipart.org/detail/21992/soccer-ball
+
+soccer-net.svg
+https://openclipart.org/detail/84247/soccer-goal
+
+football.svg
+https://openclipart.org/detail/91027/american-football
+
+football-goal.svg
+https://openclipart.org/detail/190281/goal-posts
+
+baseball-diamond.svg
+https://openclipart.org/detail/21392/baseball-diamond
+
+baseball.svg
+https://openclipart.org/detail/185882/baseball
+

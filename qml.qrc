@@ -82,4 +82,15 @@
         <file alias="pink.ogg">speech/pink.ogg</file>
         <file alias="goodjob.ogg">speech/goodjob.ogg</file>
     </qresource>
+    <qresource prefix="/matchBallNet">
+        <file alias="baseball.svg">matchBallNet/baseball.svg</file>
+        <file alias="baseball-diamond.svg">matchBallNet/baseball-diamond.svg</file>
+        <file alias="soccerball.svg">matchBallNet/soccerball.svg</file>
+        <file alias="soccer-net.svg">matchBallNet/soccer-net.svg</file>
+        <file alias="football.svg">matchBallNet/football.svg</file>
+        <file alias="football-goal.svg">matchBallNet/football-goal.svg</file>
+        <file alias="basketball.svg">matchBallNet/basketball.svg</file>
+        <file alias="basketball-net.svg">matchBallNet/basketball-net.svg</file>
+        <file alias="MatchBallGoals.qml">matchBallNet/MatchBallGoals.qml</file>
+    </qresource>
 </RCC>

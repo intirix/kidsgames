@@ -27,4 +27,9 @@ ListModel {
         appIcon: "/christmasTree/icon.png"
         appUrl: "qrc:/christmasTree/ChristmasTreePage.qml"
     }
+    ListElement {
+        appName: "Match Balls"
+        appIcon: "/matchBallNet/basketball.svg"
+        appUrl: "qrc:/matchBallNet/MatchBallGoals.qml"
+    }
 }

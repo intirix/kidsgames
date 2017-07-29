@@ -73,17 +73,18 @@ MultiPointTouchArea {
 
             if (tracked[tp.pointId]!==undefined) {
                 var obj = tracked[tp.pointId];
+                console.log("Dropped point");
 
                 // iterate over all destinations to see if the release was in one
                 for (var j = 0; j < destList.length; j++) {
                     var dest = destList[ j ];
 
                     // calculate the dest local coordinates of the release point
-                    var destReleasePoint = Qt.point(tp.x - dest.x, tp.y - dest.y);
+                    var destReleasePoint = Qt.point(tp.x - dest.getX(), tp.y - dest.getY());
 
                     // if the release was in the destination
                     if (dest.contains(destReleasePoint)) {
-                        console.log("dest["+j+"] loc="+dest.x+"x"+dest.y+" point="+tp.x+"x"+tp.y);
+                        console.log("dest["+j+"] loc="+dest.getX()+"x"+dest.getY()+" point="+tp.x+"x"+tp.y);
                         dest.itemReleased(obj.sprite);
                     }
                 }

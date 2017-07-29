@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 13.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<svg
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:x="http://ns.adobe.com/Extensibility/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:graph="http://ns.adobe.com/Graphs/1.0/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    id="Layer_1"
+    enable-background="new 0 0 247.875 185.791"
+    xml:space="preserve"
+    viewBox="0 0 247.875 185.791"
+    version="1.1"
+    y="0px"
+    x="0px"
+  >
+<g
+    >
+	<rect
+        width="247.88"
+        height="185.79"
+        fill="#009F0D"
+    />
+	<path
+        d="m112.56 79.146c-37.747-37.257-89.46-14.98-89.46-14.98l-0.857 91.594c-5.333 1.264-9.047 6.294-8.495 11.898 0.603 6.11 6.046 10.575 12.157 9.973 4.919-0.485 8.767-4.109 9.767-8.69l91.197-0.118s21.37-54.47-14.31-89.674zm-22.455 75.034s-2.981 0.484-5.832 3.13c-2.759 2.562-3.432 6.364-3.432 6.364l-45.224 0.324c-0.98-4.146-4.239-7.308-8.279-8.251l0.908-46.187s4.763-0.957 6.481-3.23c1.719-2.274 2.814-5.944 2.814-5.944l44.846-0.052s-0.374 2.788 2.51 5.743c2.879 2.954 5.302 2.877 5.302 2.877l-0.094 45.23z"
+        fill="#FFC93F"
+    />
+	<line
+        y2="165.89"
+        x1="31.433"
+        x2="247.21"
+        stroke="#FFFFFF"
+        y1="166.14"
+        stroke-width=".5"
+        fill="none"
+    />
+	<line
+        y2="160.05"
+        x1="25.529"
+        x2="25.583"
+        stroke="#FFFFFF"
+        y1=".52"
+        stroke-width=".5"
+        fill="none"
+    />
+	<circle
+        cy="133.68"
+        cx="57.149"
+        r="6.929"
+        fill="#FFC93F"
+    />
+	<rect
+        y="97.182"
+        x="90.872"
+        height="3.972"
+        width="3.972"
+        fill="#FFFFFF"
+    />
+	<rect
+        y="161.93"
+        x="90.872"
+        height="3.972"
+        width="3.972"
+        fill="#FFFFFF"
+    />
+	<rect
+        y="96.982"
+        x="25.927"
+        height="3.972"
+        width="3.972"
+        fill="#FFFFFF"
+    />
+	<polygon
+        points="29.218 165.26 26.385 165.26 26.41 162.46 28.08 160.78 30.889 163.59"
+        fill="#FFFFFF"
+    />
+		<rect
+        transform="matrix(.7071 .7071 -.7071 .7071 121.42 30.95)"
+        height="5.731"
+        width="3.353"
+        stroke="#FFFFFF"
+        y="159.17"
+        x="21.671"
+        stroke-width=".4756"
+        fill="none"
+    />
+		<rect
+        transform="matrix(.7071 .7071 -.7071 .7071 127.55 28.532)"
+        height="5.731"
+        width="3.498"
+        stroke="#FFFFFF"
+        y="165.36"
+        x="27.583"
+        stroke-width=".4858"
+        fill="none"
+    />
+		<rect
+        transform="matrix(.7072 .707 -.707 .7072 125.46 32.24)"
+        height="6.375"
+        width="5.158"
+        stroke="#FFFFFF"
+        y="164.4"
+        x="21.225"
+        stroke-width=".6221"
+        fill="none"
+    />
+	<polyline
+        stroke="#FFFFFF"
+        stroke-width=".5"
+        points="94.366 177.43 94.366 170.76 78.699 170.76 78.823 177.21"
+        fill="none"
+    />
+	<polyline
+        stroke="#FFFFFF"
+        stroke-width=".5"
+        points="13.543 113.27 20.217 113.27 20.217 97.607 13.759 97.73"
+        fill="none"
+    />
+</g
+  >
+<metadata
+    ><rdf:RDF
+      ><cc:Work
+        ><dc:format
+          >image/svg+xml</dc:format
+        ><dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        /><cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        /><dc:publisher
+          ><cc:Agent
+              rdf:about="http://openclipart.org/"
+            ><dc:title
+              >Openclipart</dc:title
+            ></cc:Agent
+          ></dc:publisher
+        ><dc:title
+          >baseball diamond</dc:title
+        ><dc:date
+          >2009-02-05T15:47:22</dc:date
+        ><dc:description
+          >a diagram of a baseball diamond</dc:description
+        ><dc:source
+          >https://openclipart.org/detail/21392/baseball-diamond-by-johnny_automatic-21392</dc:source
+        ><dc:creator
+          ><cc:Agent
+            ><dc:title
+              >johnny_automatic</dc:title
+            ></cc:Agent
+          ></dc:creator
+        ><dc:subject
+          ><rdf:Bag
+            ><rdf:li
+              >baseball</rdf:li
+            ><rdf:li
+              >diagram</rdf:li
+            ><rdf:li
+              >diamond</rdf:li
+            ><rdf:li
+              >field</rdf:li
+            ><rdf:li
+              >sport</rdf:li
+            ></rdf:Bag
+          ></dc:subject
+        ></cc:Work
+      ><cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        ><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        /></cc:License
+      ></rdf:RDF
+    ></metadata
+  ></svg
+>

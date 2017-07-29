@@ -8,6 +8,7 @@ Rectangle {
     property bool cloneItem: false
     property var cloneParent: parent
     property var area: null
+    property var metadata: null
 
     color: "transparent"
     width: size
