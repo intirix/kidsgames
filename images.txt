@@ -147,3 +147,10 @@ https://openclipart.org/detail/21392/baseball-diamond
 baseball.svg
 https://openclipart.org/detail/185882/baseball
 
+
+ruler/icon.png
+http://www.iconarchive.com/show/beautiful-flat-one-color-icons-by-elegantthemes/ruler-triangle-icon.html
+GPL
+
+
+

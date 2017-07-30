@@ -6,6 +6,7 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize/4
+    property int buttonHeight: buttonSize * 12 / 10
     property int buttonWidth: buttonSize * 11 / 10
 
     ExitButton {
@@ -17,7 +18,7 @@ Rectangle {
         id: gridDelegate
         Item {
             width: buttonWidth
-            height: buttonSize
+            height: buttonHeight
             Column {
                 Rectangle {
 
@@ -70,7 +71,7 @@ Rectangle {
         anchors.top: exitButton.bottom
         anchors.bottom: parent.bottom
 
-        cellHeight: buttonSize
+        cellHeight: buttonHeight
         cellWidth: buttonWidth
 
         model: AppModel {}

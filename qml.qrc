@@ -93,4 +93,8 @@
         <file alias="basketball-net.svg">matchBallNet/basketball-net.svg</file>
         <file alias="MatchBallGoals.qml">matchBallNet/MatchBallGoals.qml</file>
     </qresource>
+    <qresource prefix="/ruler">
+        <file alias="icon.png">ruler/icon.png</file>
+        <file alias="Ruler.qml">ruler/Ruler.qml</file>
+    </qresource>
 </RCC>

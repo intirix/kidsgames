@@ -32,4 +32,9 @@ ListModel {
         appIcon: "/matchBallNet/basketball.svg"
         appUrl: "qrc:/matchBallNet/MatchBallGoals.qml"
     }
+    ListElement {
+        appName: "Ruler"
+        appIcon: "/ruler/icon.png"
+        appUrl: "qrc:/ruler/Ruler.qml"
+    }
 }
