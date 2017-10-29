@@ -15,6 +15,13 @@
         <file alias="colors.png">images/colors.png</file>
         <file alias="pen-write.png">images/pen-write.png</file>
         <file alias="pen-draw.png">images/pen-draw.png</file>
+
+        <file alias="up.png">images/up.png</file>
+        <file alias="down.png">images/down.png</file>
+        <file alias="left.png">images/left.png</file>
+        <file alias="right.png">images/right.png</file>
+
+        <file alias="person.png">images/person.png</file>
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>
@@ -32,6 +39,9 @@
     <qresource prefix="/shapes">
         <file alias="Shapes.qml">shapes/Shapes.qml</file>
         <file alias="multiply-icon.png">shapes/multiply-icon.png</file>
+    </qresource>
+    <qresource prefix="/arrows">
+        <file alias="Directions.qml">arrows/Directions.qml</file>
     </qresource>
     <qresource prefix="/draw">
         <file alias="DrawPage.qml">draw/DrawPage.qml</file>

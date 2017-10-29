@@ -43,6 +43,29 @@ exit.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Power-icon.html
 http://graphicloads.com/
 
+person.png
+http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Man-icon.html
+http://graphicloads.com/
+
+
+up.png
+http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-up-icon.html
+http://graphicloads.com/
+
+down.png
+http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-down-icon.html
+http://graphicloads.com/
+
+left.png
+http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-back-icon.html
+http://graphicloads.com/
+
+right.png
+http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-next-3-icon.html
+http://graphicloads.com/
+
+
+
 
 
 
