@@ -8,9 +8,14 @@ Rectangle {
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize / 12
     property string currentText: "\u25A0"
+    property string currentColor: "red"
 
     property var letterList: [
-        ["\u25A0","\u25AC","\u25B2","\u25CF"]
+        ["\u25A0","\u25AC","\u25B2","\u25CF","\u2665","\u25C6"]
+    ]
+
+    property var colorList: [
+        "#FF0000", "#FFFF00", "#0000FF", "#00FF00", "#FFA500", "#9400D3"
     ]
 
     color: "#000000"
@@ -25,9 +30,14 @@ Rectangle {
         currentText = txt;
     }
 
+    function changeColor() {
+        var rnum = Math.floor(Math.random() * colorList.length);
+        currentColor = colorList[rnum];
+    }
+
     Text {
         id: textView
-        color: "#ffffff"
+        color: currentColor
         text: currentText
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
@@ -37,6 +47,7 @@ Rectangle {
 
         Component.onCompleted: {
             setText(randomText());
+            changeColor();
         }
     }
 
@@ -56,6 +67,7 @@ Rectangle {
             anchors.fill: parent
             onClicked: {
                 setText(randomText());
+                changeColor();
             }
         }
     }
