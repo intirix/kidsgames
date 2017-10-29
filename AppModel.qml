@@ -18,6 +18,11 @@ ListModel {
         appUrl: "qrc:/reading/SightWords.qml"
     }
     ListElement {
+        appName: "Shapes"
+        appIcon: "/shapes/multiply-icon.png"
+        appUrl: "qrc:/shapes/Shapes.qml"
+    }
+    ListElement {
         appName: "Colors"
         appIcon: "/images/colors.png"
         appUrl: "qrc:/colorSoundBoard/ColorSoundBoardPage.qml"

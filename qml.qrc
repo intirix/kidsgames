@@ -29,6 +29,10 @@
         <file alias="SightWords.qml">reading/SightWords.qml</file>
         <file alias="eye.png">reading/eye.png</file>
     </qresource>
+    <qresource prefix="/shapes">
+        <file alias="Shapes.qml">shapes/Shapes.qml</file>
+        <file alias="multiply-icon.png">shapes/multiply-icon.png</file>
+    </qresource>
     <qresource prefix="/draw">
         <file alias="DrawPage.qml">draw/DrawPage.qml</file>
     </qresource>
