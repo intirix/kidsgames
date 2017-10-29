@@ -23,6 +23,10 @@ pen-draw.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Pen-icon.html
 http://graphicloads.com/
 
+eye.png
+http://www.iconarchive.com/show/medical-health-icons-by-graphicloads/eye-icon.html
+http://graphicloads.com/
+
 back.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Arrow-previous-3-icon.html
 http://graphicloads.com/

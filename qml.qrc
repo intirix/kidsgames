@@ -4,6 +4,7 @@
         <file>MainForm.ui.qml</file>
         <file>AppModel.qml</file>
         <file>Home.qml</file>
+        <file>images.txt</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="back.png">images/back.png</file>
@@ -23,6 +24,10 @@
         <file alias="Trace.qml">trace/Trace.qml</file>
         <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
         <file alias="TraceCapitolLetterModel.qml">trace/TraceCapitolLetterModel.qml</file>
+    </qresource>
+    <qresource prefix="/reading">
+        <file alias="SightWords.qml">reading/SightWords.qml</file>
+        <file alias="eye.png">reading/eye.png</file>
     </qresource>
     <qresource prefix="/draw">
         <file alias="DrawPage.qml">draw/DrawPage.qml</file>

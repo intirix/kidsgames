@@ -13,7 +13,12 @@ ListModel {
         appUrl: "qrc:/draw/DrawPage.qml"
     }
     ListElement {
-        appName: "Color Sound Board"
+        appName: "Sight Words"
+        appIcon: "/reading/eye.png"
+        appUrl: "qrc:/reading/SightWords.qml"
+    }
+    ListElement {
+        appName: "Colors"
         appIcon: "/images/colors.png"
         appUrl: "qrc:/colorSoundBoard/ColorSoundBoardPage.qml"
     }
