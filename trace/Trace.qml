@@ -7,8 +7,20 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize / 12
+    property string traceText: "M"
 
     color: "#000000"
+
+    state: "UPPER"
+
+    states: [
+        State {
+            name: "UPPER"
+        },
+        State {
+            name: "LOWER"
+        }
+    ]
 
     function randomLetter() {
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -19,7 +31,7 @@ Rectangle {
     }
 
     function setText(txt) {
-        textView.text = txt;
+        traceText = txt;
     }
 
     function setDrawColor(c) {
@@ -33,7 +45,7 @@ Rectangle {
     Text {
         id: textView
         color: "#ffffff"
-        text: "M"
+        text: ( page.state == "UPPER" ? traceText.toUpperCase() : traceText.toLowerCase() )
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         font {
@@ -41,7 +53,7 @@ Rectangle {
         }
 
         Component.onCompleted: {
-            text = randomLetter();
+            setText(randomLetter());
         }
     }
 
@@ -80,7 +92,7 @@ Rectangle {
             anchors.fill: parent
             onClicked: {
                 clearLines();
-                textView.text = randomLetter();
+                setText(randomLetter());
             }
         }
     }
@@ -106,7 +118,33 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                stack.push(Qt.resolvedUrl("TraceSelect.qml"))
+                stack.push({item:Qt.resolvedUrl("TraceSelect.qml"),properties: {"lettercase":page.state}});
+            }
+        }
+    }
+
+    Rectangle {
+        id: caseButton
+        width: buttonSize
+        height: buttonSize
+
+        anchors.bottom: parent.bottom
+        anchors.right: selectButton.left
+        color: "transparent"
+        Text {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: ( page.state == "UPPER" ? "\u2193" : "\u2191" )
+            color: textView.color
+            font {
+                pixelSize: buttonSize * 9 / 10
+            }
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                page.state = ( page.state == "UPPER" ? "LOWER" : "UPPER" );
             }
         }
     }
@@ -117,7 +155,7 @@ Rectangle {
         width: buttonSize
         height: buttonSize
         anchors.bottom: parent.bottom
-        anchors.right: selectButton.left
+        anchors.right: caseButton.left
 
         MouseArea {
             anchors.fill: parent

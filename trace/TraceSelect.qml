@@ -5,6 +5,7 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
     property int buttonSize: squareSize/4
+    property string lettercase: "UPPER"
 
     Component {
         id: gridDelegate
@@ -20,7 +21,7 @@ Rectangle {
 
                     Text {
                         id: gridItemText
-                        text: character;
+                        text: ( lettercase=="UPPER" ? character.toUpperCase() : character.toLowerCase() );
                         color: themeForegroundColor
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
