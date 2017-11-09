@@ -11,7 +11,8 @@ Rectangle {
     property string currentColor: "red"
 
     property var letterList: [
-        ["\u25A0","\u25AC","\u25B2","\u25CF","\u2665","\u25C6","\u2B2C"]
+        ["\u25A0","\u25AC","\u25B2","\u25CF","\u2665","\u25C6"
+         /* ellipse "\u2B2C"*/]
     ]
 
     property var colorList: [

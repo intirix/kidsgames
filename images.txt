@@ -183,5 +183,7 @@ ruler/icon.png
 http://www.iconarchive.com/show/beautiful-flat-one-color-icons-by-elegantthemes/ruler-triangle-icon.html
 GPL
 
-
+counter/icon.png
+http://www.iconarchive.com/show/flat-finance-icons-by-graphicloads/stat-icon.html
+http://graphicloads.com/
 

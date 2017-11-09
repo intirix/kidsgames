@@ -116,4 +116,8 @@
         <file alias="icon.png">ruler/icon.png</file>
         <file alias="Ruler.qml">ruler/Ruler.qml</file>
     </qresource>
+    <qresource prefix="/counting">
+        <file alias="icon.png">counting/icon.png</file>
+        <file alias="SimpleCounting.qml">counting/SimpleCounting.qml</file>
+    </qresource>
 </RCC>
