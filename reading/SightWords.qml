@@ -10,7 +10,7 @@ Rectangle {
     property string currentWord: "M"
 
     property var wordList: [
-        "do, are, on, one, like, or, day, see, of, no, yes, be, you, can, to, go, up, we, the, it, and, is me, a, in",
+        "do, are, on, one, like, or, day, see, of, no, yes, be, you, can, to, go, up, we, the, it, and, is, me, a, in",
         "a, and, away, big, blue, can, come, down, find, for, funny, go, help, here, I, in, is, it, jump, little, look, make, me, my, not, one, play, red, run, said, see, the, three, to, two, up, we, where, yellow, you"
     ]
 
