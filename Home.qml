@@ -14,6 +14,12 @@ Rectangle {
         anchors.right: parent.right
     }
 
+    InfoButton {
+        id: infoButton
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+    }
+
     Component {
         id: gridDelegate
         Item {
@@ -69,7 +75,7 @@ Rectangle {
     GridView {
         width: parent.width
         anchors.top: exitButton.bottom
-        anchors.bottom: parent.bottom
+        anchors.bottom: infoButton.top
 
         cellHeight: buttonHeight
         cellWidth: buttonWidth

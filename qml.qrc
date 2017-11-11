@@ -5,24 +5,23 @@
         <file>AppModel.qml</file>
         <file>Home.qml</file>
         <file>images.txt</file>
+        <file>InfoPage.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="back.png">images/back.png</file>
         <file alias="exit.png">images/exit.png</file>
+        <file alias="info.png">images/info.png</file>
         <file alias="home.png">images/home.png</file>
         <file alias="restart.png">images/restart.png</file>
         <file alias="random.png">images/random.png</file>
         <file alias="colors.png">images/colors.png</file>
         <file alias="pen-write.png">images/pen-write.png</file>
         <file alias="pen-draw.png">images/pen-draw.png</file>
-
         <file alias="up.png">images/up.png</file>
         <file alias="down.png">images/down.png</file>
         <file alias="left.png">images/left.png</file>
         <file alias="right.png">images/right.png</file>
-
         <file alias="person.png">images/person.png</file>
-
         <file alias="app.png">images/app.png</file>
         <file alias="app.svg">images/app.svg</file>
     </qresource>
@@ -58,6 +57,7 @@
         <file alias="DraggableItem.qml">components/DraggableItem.qml</file>
         <file alias="DraggableItemArea.qml">components/DraggableItemArea.qml</file>
         <file alias="DraggableItemDestination.qml">components/DraggableItemDestination.qml</file>
+        <file>InfoButton.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>

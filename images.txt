@@ -1,3 +1,8 @@
+app.svg and app.png
+Derived from https://github.com/google/material-design-icons
+License: APL 2.0
+
+
 app-*.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Degree-icon.html
 http://graphicloads.com/
@@ -42,6 +47,11 @@ http://graphicloads.com/
 exit.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Power-icon.html
 http://graphicloads.com/
+
+info.png
+http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/128/Problem-info-icon.png
+http://graphicloads.com/
+
 
 person.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Man-icon.html
