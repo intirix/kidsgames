@@ -18,6 +18,12 @@ Rectangle {
     property var total: 10
     property var numVisible: parseInt(Math.random() * total)
 
+    property var images: [
+        "qrc:/images/animals/elephant.svg",
+        "qrc:/sortAnimals/dog.svg",
+        "qrc:/sortAnimals/turtle.svg",
+    ]
+
     Item {
         anchors.top: parent.top
         anchors.bottom: parent.verticalCenter
@@ -63,6 +69,8 @@ Rectangle {
         for (var i = 0; i < max; i++) {
             var obj = animals[i];
             obj.moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
+            var url = images[parseInt(Math.random() * images.length)];
+            obj.source = url;
             if (i < numVisible) {
                 obj.visible = true;
             } else {
