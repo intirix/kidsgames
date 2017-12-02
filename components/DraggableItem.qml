@@ -56,6 +56,14 @@ Rectangle {
         id: refImage
         source: parent.source
         visible: false
+
+        onStatusChanged: {
+            if (refImage.status==Image.Ready) {
+                console.log(source+" is ready");
+                canvas.loadImage(source);
+                canvas.requestPaint();
+            }
+        }
     }
 
     Canvas {
@@ -63,16 +71,21 @@ Rectangle {
         width: size
         height: size
 
-        property var xScale: (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height)
-        property var yScale: (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width)
-
         Component.onCompleted: {
             loadImage(source);
         }
 
         onPaint: {
             var ctx = getContext("2d");
-            ctx.drawImage(source,0,0, xScale, yScale);
+            if (refImage.status==Image.Ready) {
+                var xScale = (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height);
+                var yScale = (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width);
+                console.log("Drawing "+source);
+                ctx.clearRect(0,0,size,size);
+                ctx.drawImage(refImage,0,0, xScale, yScale);
+            } else {
+                console.log("Skipping draw because "+source+" is not ready");
+            }
         }
 
         onImageLoaded: {
