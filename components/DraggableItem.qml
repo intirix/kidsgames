@@ -23,7 +23,8 @@ Rectangle {
     }
 
     function isHit(x,y) {
-        var data = canvas.getContext("2d").getImageData(x, y, 1, 1)
+        console.log("isHit("+x+","+y+")");
+        var data = canvas.getContext("2d").getImageData(x/area.scale, y/area.scale, 1, 1)
         return data.data[3]>0;
     }
 
@@ -56,7 +57,6 @@ Rectangle {
         id: refImage
         source: parent.source
         visible: false
-
         onStatusChanged: {
             if (refImage.status==Image.Ready) {
                 console.log(source+" is ready");
@@ -64,12 +64,16 @@ Rectangle {
                 canvas.requestPaint();
             }
         }
+
     }
 
     Canvas {
         id: canvas
         width: size
         height: size
+
+        property var xScale: (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height)
+        property var yScale: (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width)
 
         Component.onCompleted: {
             loadImage(source);
