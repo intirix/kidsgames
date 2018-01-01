@@ -9,6 +9,7 @@ Rectangle {
     property var cloneParent: parent
     property var area: null
     property var metadata: null
+    property var moveTarget: me
 
     color: "transparent"
     width: size
@@ -44,6 +45,19 @@ Rectangle {
     }
 
     function moveToRandomPosition(minX, minY, maxX, maxY) {
+        if (minX===undefined) {
+            minX = 0;
+        }
+        if (minY===undefined) {
+            minY = 0;
+        }
+        if (maxX===undefined) {
+            maxX = parent.width;
+        }
+        if (maxY===undefined) {
+            maxY = parent.height;
+        }
+
         var width = maxX - minY - size;
         var height = maxY - minY - size;
         var offsetX = Math.random() * width;

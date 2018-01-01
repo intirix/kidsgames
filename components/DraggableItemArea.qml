@@ -41,6 +41,7 @@ MultiPointTouchArea {
             for (var j = 0; j < items.length; j++ ) {
                 var sprite = items[j];
                 var coords = mapFromItem(sprite,0, 0);
+                var targetCoords = mapFromItem(sprite.moveTarget, 0, 0);
                 console.log("Item currently at "+coords.x+"x"+coords.y);
 
                 var spriteSize = sprite.size * scale;
@@ -51,18 +52,19 @@ MultiPointTouchArea {
                     var canvasY = parseInt(tp.y - coords.y);
                     console.log("item "+canvasX+"x"+canvasY);
                     if (sprite.isHit(canvasX, canvasY)) {
-                        var initX = sprite.x;
-                        var initY = sprite.y;
+                        var initX = sprite.moveTarget.x;
+                        var initY = sprite.moveTarget.y;
                         if (locationReference!=null) {
                             initX = locationReference.x+locationReference.mapFromItem(sprite,0,0).x / scale;
                             initY = locationReference.y+locationReference.mapFromItem(sprite,0,0).y / scale;
                         }
-                        console.log("sprite location: "+sprite.x+"x"+sprite.y+", fromRef: "+initX+"x"+initY);
+                        console.log("sprite location: "+sprite.moveTarget.x+"x"+sprite.moveTarget.y+", fromRef: "+initX+"x"+initY);
                         console.log("HIT, start at offset "+canvasX+"x"+canvasY+" location is "+initX+"x"+initY);
 
                         var obj = sprite.getReference();
                         tracked[tp.pointId] = {
                             sprite: obj,
+                            target: obj.moveTarget,
                             offsetX: canvasX,
                             offsetY: canvasY,
                             dragStartX: tp.x,
@@ -99,15 +101,15 @@ MultiPointTouchArea {
 
                 console.log("Moved by "+draggedX+"x"+draggedY);
                 if (draggedX !== 0 && draggedY !== 0){
-                    var oldX = obj.sprite.x;
-                    var oldY = obj.sprite.y;
-                    obj.sprite.x = obj.initX + draggedX;
-                    obj.sprite.y = obj.initY + draggedY;
+                    var oldX = obj.target.x;
+                    var oldY = obj.target.y;
+                    obj.target.x = obj.initX + draggedX;
+                    obj.target.y = obj.initY + draggedY;
                     //obj.sprite.x = tp.x - obj.offsetX;
                     //obj.sprite.y = tp.y - obj.offsetY;
 
-                    var movedX = obj.sprite.x - oldX;
-                    var movedY = obj.sprite.y - oldY;
+                    var movedX = obj.target.x - oldX;
+                    var movedY = obj.target.y - oldY;
 
                     var errorX = parseInt((tp.x - obj.offsetX)-(obj.initX + draggedX));
                     var errorY = parseInt((tp.y - obj.offsetY)-(obj.initY + draggedY));
