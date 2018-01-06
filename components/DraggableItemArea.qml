@@ -55,8 +55,8 @@ MultiPointTouchArea {
                         var initX = sprite.moveTarget.x;
                         var initY = sprite.moveTarget.y;
                         if (locationReference!=null) {
-                            initX = locationReference.x+locationReference.mapFromItem(sprite,0,0).x / scale;
-                            initY = locationReference.y+locationReference.mapFromItem(sprite,0,0).y / scale;
+                            initX = locationReference.x+locationReference.mapFromItem(sprite.moveTarget,0,0).x / scale;
+                            initY = locationReference.y+locationReference.mapFromItem(sprite.moveTarget,0,0).y / scale;
                         }
                         console.log("sprite location: "+sprite.moveTarget.x+"x"+sprite.moveTarget.y+", fromRef: "+initX+"x"+initY);
                         console.log("HIT, start at offset "+canvasX+"x"+canvasY+" location is "+initX+"x"+initY);
@@ -114,7 +114,7 @@ MultiPointTouchArea {
                     var errorX = parseInt((tp.x - obj.offsetX)-(obj.initX + draggedX));
                     var errorY = parseInt((tp.y - obj.offsetY)-(obj.initY + draggedY));
                     console.log("error="+errorX+"x"+errorY);
-                    console.log("Object moved from "+oldX+"x"+oldY+" to "+obj.sprite.x+","+obj.sprite.y);
+                    console.log("Target moved from "+oldX+"x"+oldY+" to "+obj.target.x+","+obj.target.y);
 
                     // make sure what you are dragging is visible
                     obj.sprite.visible = true;
