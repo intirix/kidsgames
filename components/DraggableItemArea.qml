@@ -29,7 +29,9 @@ MultiPointTouchArea {
         }
         */
 
-        console.log("Reference is at "+locationReference.x+"x"+locationReference.y);
+        if (locationReference!=null) {
+            console.log("Reference is at "+locationReference.x+"x"+locationReference.y);
+        }
 
         for (var i = 0; i < touchPoints.length; i++ ) {
             var tp = touchPoints[ i ];
@@ -58,7 +60,7 @@ MultiPointTouchArea {
                             initX = locationReference.x+locationReference.mapFromItem(sprite.moveTarget,0,0).x / scale;
                             initY = locationReference.y+locationReference.mapFromItem(sprite.moveTarget,0,0).y / scale;
                         }
-                        console.log("sprite location: "+sprite.moveTarget.x+"x"+sprite.moveTarget.y+", fromRef: "+initX+"x"+initY);
+                        console.log("sprite target location: "+sprite.moveTarget.x+"x"+sprite.moveTarget.y+", fromRef: "+initX+"x"+initY);
                         console.log("HIT, start at offset "+canvasX+"x"+canvasY+" location is "+initX+"x"+initY);
 
                         var obj = sprite.getReference();
