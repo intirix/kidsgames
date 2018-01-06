@@ -10,6 +10,7 @@ Rectangle {
     property var area: null
     property var metadata: null
     property var moveTarget: me
+    property bool draggable: true
 
     color: "transparent"
     width: size

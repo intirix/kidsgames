@@ -46,7 +46,7 @@ MultiPointTouchArea {
 
                 var spriteSize = sprite.size * scale;
 
-                if (sprite.visible&&tp.x>=coords.x&&tp.y>=coords.y&&tp.x<=(coords.x+spriteSize)&&tp.y<=(coords.y+spriteSize)) {
+                if (sprite.visible&&sprite.draggable&&tp.x>=coords.x&&tp.y>=coords.y&&tp.x<=(coords.x+spriteSize)&&tp.y<=(coords.y+spriteSize)) {
                     console.log("Inside the box");
                     var canvasX = parseInt(tp.x - coords.x);
                     var canvasY = parseInt(tp.y - coords.y);
