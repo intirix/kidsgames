@@ -132,7 +132,9 @@ MultiPointTouchArea {
 
             if (tracked[tp.pointId]!==undefined) {
                 var obj = tracked[tp.pointId];
-                console.log("Dropped point");
+                console.log("Dropped point at "+obj.target.x+"x"+obj.target.y);
+
+                area.objectReleased(obj);
 
                 // iterate over all destinations to see if the release was in one
                 for (var j = 0; j < destList.length; j++) {
@@ -152,4 +154,6 @@ MultiPointTouchArea {
             }
         }
     }
+
+    signal objectReleased(var obj)
 }
