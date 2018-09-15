@@ -14,8 +14,8 @@ Rectangle {
     property int startMaxY: parent.height / 2
 
     property var animals: []
-    property var max: 20
-    property var total: 10
+    property int max: 20
+    property int total: 10
     property var numVisible: parseInt(Math.random() * total)
 
     property var images: [

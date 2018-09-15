@@ -147,19 +147,23 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        for (var i = 0; i < waterList.length; i++) {
-            var animal = waterList[ i ];
+        var i = 0;
+        var animal;
+        var component;
+        var obj;
+        for (i = 0; i < waterList.length; i++) {
+            animal = waterList[ i ];
 
-            var component = Qt.createComponent("qrc:/components/DraggableItem.qml");
-            var obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
+            component = Qt.createComponent("qrc:/components/DraggableItem.qml");
+            obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
             obj.moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
             animals.push(obj);
         }
-        for (var i = 0; i < landList.length; i++) {
-            var animal = landList[ i ];
+        for (i = 0; i < landList.length; i++) {
+            animal = landList[ i ];
 
-            var component = Qt.createComponent("qrc:/components/DraggableItem.qml");
-            var obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
+            component = Qt.createComponent("qrc:/components/DraggableItem.qml");
+            obj = component.createObject(me, {"size": baseAnimalSize, "area": area, "source": animal.image, "cloneItem": false});
             obj.moveToRandomPosition(startMinX, startMinY, startMaxX, startMaxY);
             animals.push(obj);
         }

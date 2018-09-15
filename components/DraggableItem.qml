@@ -3,7 +3,7 @@ import QtQuick 2.0
 Rectangle {
     id: me
 
-    property var size: 200
+    property int size: 200
     property url source: "qrc:/images/animals/whale.svg"
     property bool cloneItem: false
     property var cloneParent: parent
