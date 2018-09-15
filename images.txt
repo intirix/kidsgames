@@ -52,6 +52,9 @@ info.png
 http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/128/Problem-info-icon.png
 http://graphicloads.com/
 
+add.png
+http://www.iconarchive.com/show/100-flat-icons-by-graphicloads/addition-icon.html
+http://graphicloads.com/
 
 person.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Man-icon.html

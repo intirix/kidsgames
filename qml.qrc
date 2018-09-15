@@ -22,6 +22,7 @@
         <file alias="left.png">images/left.png</file>
         <file alias="right.png">images/right.png</file>
         <file alias="person.png">images/person.png</file>
+        <file alias="add.png">images/add.png</file>
         <file alias="app.png">images/app.png</file>
         <file alias="app.svg">images/app.svg</file>
     </qresource>
@@ -122,5 +123,7 @@
     <qresource prefix="/counting">
         <file alias="icon.png">counting/icon.png</file>
         <file alias="SimpleCounting.qml">counting/SimpleCounting.qml</file>
+        <file alias="Add.qml">counting/Add.qml</file>
+        <file alias="AddTo10.qml">counting/AddTo10.qml</file>
     </qresource>
 </RCC>

@@ -53,6 +53,11 @@ ListModel {
         appUrl: "qrc:/counting/SimpleCounting.qml"
     }
     ListElement {
+        appName: "Add"
+        appIcon: "/images/add.png"
+        appUrl: "qrc:/counting/Add.qml"
+    }
+    ListElement {
         appName: "Directions"
         appIcon: "/images/up.png"
         appUrl: "qrc:/arrows/Directions.qml"
