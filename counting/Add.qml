@@ -8,7 +8,7 @@ Rectangle {
     property int squareSize: Math.min(parent.height,parent.width)
     property int baseAnimalSize: squareSize/8
 
-    property int maxAnimals: 7;
+    property int maxAnimals: 20;
 
     property int startMinX: 0
     property int startMinY: backButton.height
@@ -26,6 +26,8 @@ Rectangle {
     property int startMinYR: backButton.height
     property int startMaxXR: parent.width
     property int startMaxYR: parent.height / 2
+
+    property int counterSize: squareSize * 1 / 20;
 
 
     property var images: [
@@ -76,7 +78,7 @@ Rectangle {
             anchors.bottom: parent.bottom;
             anchors.right: parent.horizontalCenter;
             anchors.bottomMargin: squareSize * 3 / 20
-            anchors.rightMargin: squareSize * 1 / 20
+            anchors.rightMargin: counterSize
         }
         Rectangle {
             color: "green"
@@ -86,7 +88,7 @@ Rectangle {
             anchors.bottom: parent.bottom;
             anchors.right: parent.right;
             anchors.bottomMargin: squareSize * 3 / 20
-            anchors.leftMargin: squareSize * 1 / 20
+            anchors.leftMargin: counterSize
         }
 
         Text {
@@ -95,7 +97,7 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom;
             font {
-                pixelSize: squareSize * 1 / 10
+                pixelSize: counterSize
             }
 
         }
@@ -105,22 +107,87 @@ Rectangle {
             text: "0"
             anchors.horizontalCenter: leftBounds.horizontalCenter
             anchors.bottom: parent.bottom;
+            horizontalAlignment: Text.AlignHCenter;
             font {
-                pixelSize: squareSize * 1 / 10
+                pixelSize: counterSize
             }
 
         }
+        Image {
+            source: "/images/up.png"
+            width: counterSize
+            height: counterSize
+            anchors.top: leftSum.top
+            anchors.left: leftSum.right;
+            anchors.leftMargin: counterSize/2;
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    addAnimal(leftBounds);
+                }
+            }
+        }
+        Image {
+            source: "/images/down.png"
+            width: counterSize
+            height: counterSize
+            anchors.top: leftSum.top
+            anchors.right: leftSum.left;
+            anchors.rightMargin: counterSize/2;
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    removeLeftAnimal();
+                }
+            }
+        }
+
+
+
         Text {
             id: rightSum;
             color: "#ffffff";
             text: "0"
             anchors.horizontalCenter: rightBounds.horizontalCenter
             anchors.bottom: parent.bottom;
+            horizontalAlignment: Text.AlignHCenter;
             font {
-                pixelSize: squareSize * 1 / 10
+                pixelSize: counterSize
             }
-
         }
+        Image {
+            source: "/images/up.png"
+            width: counterSize
+            height: counterSize
+            anchors.top: rightSum.top
+            anchors.left: rightSum.right;
+            anchors.leftMargin: counterSize/2;
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    addAnimal(rightBounds);
+                }
+            }
+        }
+        Image {
+            source: "/images/down.png"
+            width: counterSize
+            height: counterSize
+            anchors.top: rightSum.top
+            anchors.right: rightSum.left;
+            anchors.rightMargin: counterSize/2;
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    removeRightAnimal();
+                }
+            }
+        }
+
 
 
     }
@@ -343,8 +410,68 @@ Rectangle {
             updateCountEquation();
 
         }
+    }
 
+    function addAnimal(boundingBox) {
+        for (var i = 0; i < maxAnimals; i++) {
+            var obj = animals[i];
+            if (!obj.visible) {
+                obj.visible = true;
+                var coordsA = me.mapFromItem(boundingBox,0,0);
+                var coordsB = me.mapFromItem(boundingBox,boundingBox.width,boundingBox.height);
+                var x1 = coordsA.x;
+                var y1 = coordsA.y;
+                var x2 = coordsB.x;
+                var y2 = coordsB.y;
+                console.log(x1+"x"+y1+" and "+x2+"x"+y2);
+                obj.moveToRandomPosition(x1,y1,x2-obj.width,y2-obj.height);
+                obj.source = images[parseInt(Math.random() * images.length)];
+                updateCountEquation();
+                return;
+            }
+        }
+    }
 
+    function removeRightAnimal() {
+        var lastAnimal = -1;
+        var firstAnimal = -1;
+        for (var i = 0; i < maxAnimals; i++) {
+            if (animals[i].visible) {
+                lastAnimal = i;
+            }
+            if (firstAnimal<0 && animals[i].x>startMaxX/2) {
+                firstAnimal = i;
+            }
+        }
+        console.log("first animal: "+firstAnimal+", last animal="+lastAnimal);
+        if (firstAnimal>=0 && lastAnimal>=0) {
+            var tmp = animals[firstAnimal];
+            animals[firstAnimal] = animals[lastAnimal];
+            animals[lastAnimal] = tmp;
+            tmp.visible = false;
+        }
+        updateCountEquation();
+    }
+
+    function removeLeftAnimal() {
+        var lastAnimal = -1;
+        var firstAnimal = -1;
+        for (var i = 0; i < maxAnimals; i++) {
+            if (animals[i].visible) {
+                lastAnimal = i;
+            }
+            if (firstAnimal<0 && animals[i].x<startMaxX/2) {
+                firstAnimal = i;
+            }
+        }
+        console.log("first animal: "+firstAnimal+", last animal="+lastAnimal);
+        if (firstAnimal>=0 && lastAnimal>=0) {
+            var tmp = animals[firstAnimal];
+            animals[firstAnimal] = animals[lastAnimal];
+            animals[lastAnimal] = tmp;
+            tmp.visible = false;
+        }
+        updateCountEquation();
     }
 
     function updateCountEquation() {
@@ -374,5 +501,4 @@ Rectangle {
         storage.setItem("pages.add.mode",mode);
         restart();
     }
-
 }

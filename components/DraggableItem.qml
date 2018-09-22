@@ -59,7 +59,7 @@ Rectangle {
             maxY = parent.height;
         }
 
-        var width = maxX - minY - size;
+        var width = maxX - minX - size;
         var height = maxY - minY - size;
         var offsetX = Math.random() * width;
         var offsetY = Math.random() * height;
