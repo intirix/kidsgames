@@ -60,6 +60,21 @@ person.png
 http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Man-icon.html
 http://graphicloads.com/
 
+calc.png
+http://www.iconarchive.com/show/macaron-icons-by-goescat/calc-icon.html
+https://github.com/goescat/Macaron-icons
+License: CC Attribution 4.0
+
+paint.png
+http://www.iconarchive.com/show/macaron-icons-by-goescat/mypaint-icon.html
+https://github.com/goescat/Macaron-icons
+License: CC Attribution 4.0
+
+dollar.png
+http://www.iconarchive.com/show/cryptocurrency-flat-icons-by-cjdowner/Dollar-USD-icon.html
+https://github.com/cjdowner
+License: CC0 - Public Domain
+
 
 up.png
 http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-up-icon.html
@@ -200,3 +215,11 @@ counter/icon.png
 http://www.iconarchive.com/show/flat-finance-icons-by-graphicloads/stat-icon.html
 http://graphicloads.com/
 
+
+images/redorb/*.png
+http://www.iconarchive.com/show/red-orb-alphabet-icons-by-iconarchive.html
+License: CC Attribution 4.0
+http://www.iconarchive.com/icons/iconarchive/red-orb-alphabet/readme.txt
+
+
+All images are unmodified unless called out

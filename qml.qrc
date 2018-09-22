@@ -25,10 +25,25 @@
         <file alias="add.png">images/add.png</file>
         <file alias="app.png">images/app.png</file>
         <file alias="app.svg">images/app.svg</file>
+        <file alias="calc.png">images/calc.png</file>
+        <file alias="paint.png">images/paint.png</file>
+        <file alias="dollar.png">images/dollar.png</file>
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>
         <file alias="elephant.svg">images/animals/elephant.svg</file>
+    </qresource>
+    <qresource prefix="/images/redorb">
+        <file alias="redorb-0.png">images/redorb/redorb-0.png</file>
+        <file alias="redorb-1.png">images/redorb/redorb-1.png</file>
+        <file alias="redorb-2.png">images/redorb/redorb-2.png</file>
+        <file alias="redorb-3.png">images/redorb/redorb-3.png</file>
+        <file alias="redorb-4.png">images/redorb/redorb-4.png</file>
+        <file alias="redorb-5.png">images/redorb/redorb-5.png</file>
+        <file alias="redorb-6.png">images/redorb/redorb-6.png</file>
+        <file alias="redorb-7.png">images/redorb/redorb-7.png</file>
+        <file alias="redorb-8.png">images/redorb/redorb-8.png</file>
+        <file alias="redorb-9.png">images/redorb/redorb-9.png</file>
     </qresource>
     <qresource prefix="/trace">
         <file alias="Trace.qml">trace/Trace.qml</file>
@@ -59,6 +74,7 @@
         <file alias="DraggableItemArea.qml">components/DraggableItemArea.qml</file>
         <file alias="DraggableItemDestination.qml">components/DraggableItemDestination.qml</file>
         <file>InfoButton.qml</file>
+        <file alias="Storage.qml">components/Storage.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file>ColorSoundBoardPage.qml</file>

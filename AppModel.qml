@@ -9,7 +9,7 @@ ListModel {
     }
     ListElement {
         appName: "Draw"
-        appIcon: "/images/pen-draw.png"
+        appIcon: "/images/paint.png"
         appUrl: "qrc:/draw/DrawPage.qml"
     }
     ListElement {
