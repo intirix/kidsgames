@@ -180,6 +180,16 @@ https://openclipart.org/detail/226751/plain-bauble-12
 pink_ball.png
 https://openclipart.org/detail/226746/plain-bauble-7
 
+star.png
+http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org/Actions-rating-icon.html
+License: GNU Lesser General Public License
+
+present.png
+http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/gift-icon.html
+License: Public Domain
+
+
+
 
 
 basketball-net.svg

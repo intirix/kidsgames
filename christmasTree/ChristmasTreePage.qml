@@ -67,6 +67,28 @@ Rectangle {
         }
     }
 
+    Column {
+        anchors.right: parent.right
+        anchors.top: backButton.bottom
+        anchors.topMargin: ballSize/2
+
+        DraggableItem {
+            area: area
+            source: "star.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+        DraggableItem {
+            area: area
+            source: "present.png"
+            size: ballSize
+            cloneItem: true
+            cloneParent: page
+        }
+
+    }
+
 
     DraggableItemArea {
         id: area

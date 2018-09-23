@@ -108,6 +108,8 @@
         <file alias="blue_ball.png">christmasTree/blue_ball.png</file>
         <file alias="gold_ball.png">christmasTree/gold_ball.png</file>
         <file alias="pink_ball.png">christmasTree/pink_ball.png</file>
+        <file alias="star.png">christmasTree/star.png</file>
+        <file alias="present.png">christmasTree/present.png</file>
     </qresource>
     <qresource prefix="/speech">
         <file alias="red.ogg">speech/red.ogg</file>
