@@ -52,6 +52,11 @@ info.png
 http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/128/Problem-info-icon.png
 http://graphicloads.com/
 
+settings.png
+http://www.iconarchive.com/show/100-flat-icons-by-graphicloads/settings-3-icon.html
+http://graphicloads.com/
+License: Freeware
+
 add.png
 http://www.iconarchive.com/show/100-flat-icons-by-graphicloads/addition-icon.html
 http://graphicloads.com/

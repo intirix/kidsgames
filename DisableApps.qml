@@ -1,6 +1,8 @@
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Controls 1.4
+import QtGraphicalEffects 1.0
 import "qrc:/components"
+
 
 Rectangle {
     color: themeBackgroundColor
@@ -10,31 +12,13 @@ Rectangle {
     property int buttonHeight: buttonSize * 12 / 10
     property int buttonWidth: buttonSize * 11 / 10
 
-    ExitButton {
-        id: exitButton
-        anchors.right: parent.right
+    Storage {
+        id: storage
     }
 
-    InfoButton {
-        id: infoButton
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
-    }
-
-    Image {
-        id: settingsButton
-        source: "/images/settings.png"
-        width: squareSize / 12
-        height: squareSize / 12
-        anchors.bottom: parent.bottom
-        anchors.left: infoButton.right
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                stack.push(Qt.resolvedUrl("qrc:/DisableApps.qml"));
-            }
-        }
+    BackButton {
+        id: backButton
+        stackRef: stack
     }
 
     Component {
@@ -62,13 +46,18 @@ Rectangle {
                             width: parent.width
                             height: parent.height
                         }
+                        ColorOverlay {
+                            anchors.fill: icon
+                            source: icon
+                            color: (storage.getItem("pages."+appKey+".enabled","true")==="true"?"#00000000":"#80800000");
+                        }
                     }
 
                     Text {
                         id: label
                         text: appName
 
-                        color: themeForegroundColor
+                        color: (storage.getItem("pages."+appKey+".enabled","true")==="true"?themeForegroundColor:"#808000");
                         anchors.bottom: parent.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         font {
@@ -80,7 +69,13 @@ Rectangle {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            stack.push(Qt.resolvedUrl(appUrl));
+                            if (storage.getItem("pages."+appKey+".enabled","true")==="true") {
+                                storage.setItem("pages."+appKey+".enabled","false");
+                            } else {
+                                storage.setItem("pages."+appKey+".enabled","true");
+                            }
+                            refreshAppList();
+                            stack.get(0).refreshAppList();
                         }
                     }
 
@@ -99,8 +94,8 @@ Rectangle {
 
     GridView {
         width: parent.width
-        anchors.top: exitButton.bottom
-        anchors.bottom: infoButton.top
+        anchors.top: backButton.bottom;
+        anchors.bottom: parent.bottom;
 
         cellHeight: buttonHeight
         cellWidth: buttonWidth
@@ -109,24 +104,18 @@ Rectangle {
         delegate: gridDelegate
     }
 
-    Storage {
-        id: storage
-    }
+
 
     function refreshAppList() {
         realModel.clear();
         for (var i=0; i<appList.count; i++) {
             var obj = appList.get(i);
-            var appKey = "pages."+obj.appKey+".enabled";
-
-            if (storage.getItem(appKey,"true")==="true") {
-                console.log(obj.appKey);
-                realModel.append(obj);
-            }
+            realModel.append(obj);
         }
     }
 
     Component.onCompleted: {
         refreshAppList();
     }
+
 }
