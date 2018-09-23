@@ -49,6 +49,7 @@
         <file alias="Trace.qml">trace/Trace.qml</file>
         <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
         <file alias="TraceCapitolLetterModel.qml">trace/TraceCapitolLetterModel.qml</file>
+        <file alias="TraceNumberModel.qml">trace/TraceNumberModel.qml</file>
     </qresource>
     <qresource prefix="/reading">
         <file alias="SightWords.qml">reading/SightWords.qml</file>

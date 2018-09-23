@@ -53,6 +53,7 @@ Rectangle {
     }
 
     GridView {
+        visible: lettercase!=="NUMBER";
         width: parent.width
         height: parent.height
 
@@ -60,6 +61,17 @@ Rectangle {
         cellWidth: buttonSize
 
         model: TraceCapitolLetterModel {}
+        delegate: gridDelegate
+    }
+    GridView {
+        visible: lettercase==="NUMBER";
+        width: parent.width
+        height: parent.height
+
+        cellHeight: buttonSize
+        cellWidth: buttonSize
+
+        model: TraceNumberModel {}
         delegate: gridDelegate
     }
 }

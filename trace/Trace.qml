@@ -11,7 +11,12 @@ Rectangle {
 
     color: "#000000"
 
-    state: "UPPER"
+    Storage {
+        id: storage
+    }
+
+
+    state: storage.getItem("pages.traceLetters.mode","UPPER");
 
     states: [
         State {
@@ -19,15 +24,26 @@ Rectangle {
         },
         State {
             name: "LOWER"
+        },
+        State {
+            name: "NUMBER"
         }
     ]
 
     function randomLetter() {
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var rnum = Math.floor(Math.random() * chars.length);
-        var ch = chars.substring(rnum,rnum+1);
-        console.log("Choosing letter '"+ch+"', number "+rnum);
-        return ch;
+        var nums = "0123456789";
+        if (page.state==="NUMBER") {
+            var rnum = Math.floor(Math.random() * nums.length);
+            var ch = nums.substring(rnum,rnum+1);
+            console.log("Choosing letter '"+ch+"', number "+rnum);
+            return ch;
+        } else {
+            rnum = Math.floor(Math.random() * chars.length);
+            ch = chars.substring(rnum,rnum+1);
+            console.log("Choosing letter '"+ch+"', number "+rnum);
+            return ch;
+        }
     }
 
     function setText(txt) {
@@ -134,7 +150,7 @@ Rectangle {
         Text {
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            text: ( page.state == "UPPER" ? "\u2193" : "\u2191" )
+            text: ( page.state == "UPPER" ? "\u2191" : ( page.state == "NUMBER" ? "7" : "\u2193" ) )
             color: textView.color
             font {
                 pixelSize: buttonSize * 9 / 10
@@ -144,7 +160,22 @@ Rectangle {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                page.state = ( page.state == "UPPER" ? "LOWER" : "UPPER" );
+                if (page.state==="UPPER") {
+                    page.state = "LOWER";
+                } else if (page.state=="LOWER") {
+                    page.state = "NUMBER";
+                    clearLines();
+                    setText(randomLetter());
+
+                } else {
+                    page.state = "UPPER";
+                    clearLines();
+                    setText(randomLetter());
+
+                }
+                storage.setItem("pages.traceLetters.mode",page.state);
+
+//                page.state = ( page.state == "UPPER" ? "LOWER" : "UPPER" );
             }
         }
     }
