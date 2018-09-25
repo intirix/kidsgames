@@ -21,6 +21,12 @@ ListModel {
         appKey: "sightWords";
     }
     ListElement {
+        appName: "Similar Words"
+        appIcon: "/images/message.png"
+        appUrl: "qrc:/reading/SimilarWords.qml"
+        appKey: "similarWords";
+    }
+    ListElement {
         appName: "Shapes"
         appIcon: "/shapes/multiply-icon.png"
         appUrl: "qrc:/shapes/Shapes.qml"

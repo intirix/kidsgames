@@ -30,6 +30,7 @@
         <file alias="paint.png">images/paint.png</file>
         <file alias="dollar.png">images/dollar.png</file>
         <file alias="settings.png">images/settings.png</file>
+        <file alias="message.png">images/message.png</file>
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>
@@ -55,6 +56,7 @@
     </qresource>
     <qresource prefix="/reading">
         <file alias="SightWords.qml">reading/SightWords.qml</file>
+        <file alias="SimilarWords.qml">reading/SimilarWords.qml</file>
         <file alias="eye.png">reading/eye.png</file>
     </qresource>
     <qresource prefix="/shapes">

@@ -80,6 +80,12 @@ http://www.iconarchive.com/show/cryptocurrency-flat-icons-by-cjdowner/Dollar-USD
 https://github.com/cjdowner
 License: CC0 - Public Domain
 
+message.png
+http://www.iconarchive.com/show/colorful-long-shadow-icons-by-graphicloads/Message-icon.html
+http://graphicloads.com/
+License: Freeware
+
+
 
 up.png
 http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-up-icon.html
