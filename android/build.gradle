@@ -34,6 +34,22 @@ android {
      * Changing them manually might break the compilation!
      *******************************************************/
 
+    signingConfigs {
+        myrelease {
+            storeFile file(System.getProperty("user.home")+"/.keys/keystore")
+            storePassword project.hasProperty("KEYSTORE_PASSWORD") ? KEYSTORE_PASSWORD : ""
+            keyAlias "intirix"
+            keyPassword project.hasProperty("KEYSTORE_PASSWORD") ? KEYSTORE_PASSWORD : ""
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.myrelease
+        }
+    }
+
+
     compileSdkVersion androidCompileSdkVersion.toInteger()
 
     buildToolsVersion androidBuildToolsVersion

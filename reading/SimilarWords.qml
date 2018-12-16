@@ -14,7 +14,7 @@ Rectangle {
         "AN": ["R","B","P","M","T","F","C","V"],
         "ID": ["D","R","L","B"],
         "ET": ["G","W","P","S","L","V","B","M"]
-    };
+    }
 
     property int currentPartIndex: 0;
     property string currentPart: wordParts[currentPartIndex];
