@@ -133,7 +133,14 @@ MultiPointTouchArea {
 
             if (tracked[tp.pointId]!==undefined) {
                 var obj = tracked[tp.pointId];
-                console.log("Dropped point at "+obj.target.x+"x"+obj.target.y);
+                var dx = parseInt(obj.initX - obj.target.x);
+                var dy = parseInt(obj.initY - obj.target.y);
+                console.log("Dropped point at "+obj.target.x+"x"+obj.target.y+", moved by "+dx+"x"+dy);
+
+                if (dx===0 && dy===0) {
+                    console.log("DIA item touched");
+                    area.objectTapped(obj.sprite);
+                }
 
                 area.objectReleased(obj);
 
@@ -157,4 +164,5 @@ MultiPointTouchArea {
     }
 
     signal objectReleased(var obj)
+    signal objectTapped(var sprite);
 }
