@@ -140,23 +140,22 @@ MultiPointTouchArea {
                 if (dx===0 && dy===0) {
                     console.log("DIA item touched");
                     area.objectTapped(obj.sprite);
-                }
+                } else {
+                    // iterate over all destinations to see if the release was in one
+                    for (var j = 0; j < destList.length; j++) {
+                        var dest = destList[ j ];
 
-                area.objectReleased(obj);
+                        // calculate the dest local coordinates of the release point
+                        var destReleasePoint = Qt.point(tp.x - dest.getX(), tp.y - dest.getY());
 
-                // iterate over all destinations to see if the release was in one
-                for (var j = 0; j < destList.length; j++) {
-                    var dest = destList[ j ];
-
-                    // calculate the dest local coordinates of the release point
-                    var destReleasePoint = Qt.point(tp.x - dest.getX(), tp.y - dest.getY());
-
-                    // if the release was in the destination
-                    if (dest.contains(destReleasePoint)) {
-                        console.log("dest["+j+"] loc="+dest.getX()+"x"+dest.getY()+" point="+tp.x+"x"+tp.y);
-                        dest.itemReleased(obj.sprite);
+                        // if the release was in the destination
+                        if (dest.contains(destReleasePoint)) {
+                            console.log("dest["+j+"] loc="+dest.getX()+"x"+dest.getY()+" point="+tp.x+"x"+tp.y);
+                            dest.itemReleased(obj.sprite);
+                        }
                     }
                 }
+                area.objectReleased(obj);
 
                 delete tracked[tp.pointId];
             }
