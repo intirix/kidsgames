@@ -17,6 +17,8 @@ Rectangle {
 
     property bool associated: false;
 
+    property var itemMetadata: ({});
+
     width: itemWidth;
     height: itemHeight;
 
@@ -30,6 +32,14 @@ Rectangle {
     onItemWidthChanged: {
         console.log("DI width changed to "+itemWidth);
         canvas.requestPaint();
+    }
+
+    onItemMetadataChanged: {
+        console.log("DI metadata changed");
+    }
+
+    onSourceChanged: {
+        console.log("DI source changed to "+source);
     }
 
     function associateWithArea() {
@@ -60,6 +70,7 @@ Rectangle {
         if (cloneItem) {
             var component = Qt.createComponent("DraggableItem.qml");
             var obj = component.createObject(cloneParent, {"itemWidth": me.itemWidth, "itemHeight": me.itemHeight, "source": source, "x": x, "y": y, "cloneItem": false});
+            obj.itemMetadata = itemMetadata;
 
             // don't draw the clone until we drag it a bit
             // this prevents a weird visual pop when first creating the item
