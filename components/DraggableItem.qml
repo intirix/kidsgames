@@ -61,7 +61,7 @@ Rectangle {
     }
 
     onAreaChanged: {
-        console.log("area changed");
+        //console.log("area changed");
         associateWithArea();
     }
 

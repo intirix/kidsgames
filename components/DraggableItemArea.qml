@@ -73,7 +73,8 @@ MultiPointTouchArea {
                             dragStartX: tp.x,
                             dragStartY: tp.y,
                             initX: initX,
-                            initY: initY
+                            initY: initY,
+                            moved: false
                         };
 
                         // if we cloned the item, we need to add it as a trackable item
@@ -102,8 +103,9 @@ MultiPointTouchArea {
                 var draggedX = parseInt(speed*(tp.x - obj.dragStartX));
                 var draggedY = parseInt(speed*(tp.y - obj.dragStartY));
 
-                console.log("Moved by "+draggedX+"x"+draggedY);
                 if (draggedX !== 0 && draggedY !== 0){
+                    console.log("Moved by "+draggedX+"x"+draggedY);
+                    obj.moved = true;
                     var oldX = obj.target.x;
                     var oldY = obj.target.y;
                     obj.target.x = obj.initX + draggedX;
@@ -116,8 +118,8 @@ MultiPointTouchArea {
 
                     var errorX = parseInt((tp.x - obj.offsetX)-(obj.initX + draggedX));
                     var errorY = parseInt((tp.y - obj.offsetY)-(obj.initY + draggedY));
-                    console.log("error="+errorX+"x"+errorY);
-                    console.log("Target moved from "+oldX+"x"+oldY+" to "+obj.target.x+","+obj.target.y);
+                    //console.log("error="+errorX+"x"+errorY);
+                    //console.log("Target moved from "+oldX+"x"+oldY+" to "+obj.target.x+","+obj.target.y);
 
                     // make sure what you are dragging is visible
                     obj.sprite.visible = true;
@@ -133,14 +135,12 @@ MultiPointTouchArea {
 
             if (tracked[tp.pointId]!==undefined) {
                 var obj = tracked[tp.pointId];
-                var dx = parseInt(obj.initX - obj.target.x);
-                var dy = parseInt(obj.initY - obj.target.y);
-                console.log("Dropped point at "+obj.target.x+"x"+obj.target.y+", moved by "+dx+"x"+dy);
 
-                if (dx===0 && dy===0) {
+                if (obj.moved===false) {
                     console.log("DIA item touched");
                     area.objectTapped(obj.sprite);
                 } else {
+                    console.log("Dropped point at "+obj.target.x+"x"+obj.target.y);
                     // iterate over all destinations to see if the release was in one
                     for (var j = 0; j < destList.length; j++) {
                         var dest = destList[ j ];
