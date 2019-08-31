@@ -47,8 +47,8 @@ Rectangle {
         // add the item to the area
         if (area!==null && area !==undefined) {
             if (!associated) {
-                area.addItem(me);
                 associated = true;
+                area.addItem(me);
                 console.log("Associated item with area");
             }
         } else {
@@ -57,6 +57,11 @@ Rectangle {
     }
 
     Component.onCompleted: {
+        associateWithArea();
+    }
+
+    onAreaChanged: {
+        console.log("area changed");
         associateWithArea();
     }
 
@@ -115,6 +120,10 @@ Rectangle {
                 canvas.loadImage(source);
                 canvas.requestPaint();
             }
+        }
+
+        onProgressChanged: {
+            console.log("Progress: "+refImage.progress);
         }
 
     }

@@ -4,6 +4,7 @@ Rectangle {
     id: me
     property var area: null
     color: "transparent"
+    property bool associated: false;
 
     signal itemReleased(var item)
 
@@ -35,12 +36,23 @@ Rectangle {
         return ret;
     }
 
-    Component.onCompleted: {
-        // if the item was declared with an area to belong to,
-        // add the item to the area
-        if (area!==null) {
-            area.addDestination(me);
+    function associateWithArea() {
+        // if the dest was declared with an area to belong to,
+        // add the dest to the area
+        if (area!==null && area!==undefined) {
+            if (!associated) {
+                associated = true;
+                area.addDestination(me);
+            }
         }
+    }
+
+    Component.onCompleted: {
+        associateWithArea();
+    }
+
+    onAreaChanged: {
+        associateWithArea();
     }
 
 }
