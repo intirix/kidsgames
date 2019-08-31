@@ -15,6 +15,8 @@ Rectangle {
     property int itemWidth: size;
     property int itemHeight: size;
 
+    property bool associated: false;
+
     width: itemWidth;
     height: itemHeight;
 
@@ -30,12 +32,22 @@ Rectangle {
         canvas.requestPaint();
     }
 
-    Component.onCompleted: {
+    function associateWithArea() {
         // if the item was declared with an area to belong to,
         // add the item to the area
-        if (area!==null) {
-            area.addItem(me);
+        if (area!==null && area !==undefined) {
+            if (!associated) {
+                area.addItem(me);
+                associated = true;
+                console.log("Associated item with area");
+            }
+        } else {
+            console.log("area is null or undefined, skipping association");
         }
+    }
+
+    Component.onCompleted: {
+        associateWithArea();
     }
 
     function isHit(x,y) {
