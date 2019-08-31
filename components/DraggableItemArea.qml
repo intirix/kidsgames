@@ -46,9 +46,10 @@ MultiPointTouchArea {
                 var targetCoords = mapFromItem(sprite.moveTarget, 0, 0);
                 console.log("Item currently at "+coords.x+"x"+coords.y);
 
-                var spriteSize = sprite.size * scale;
+                var spriteWidth = sprite.itemWidth * scale;
+                var spriteHeight = sprite.itemHeight * scale;
 
-                if (sprite.visible&&sprite.draggable&&tp.x>=coords.x&&tp.y>=coords.y&&tp.x<=(coords.x+spriteSize)&&tp.y<=(coords.y+spriteSize)) {
+                if (sprite.visible&&sprite.draggable&&tp.x>=coords.x&&tp.y>=coords.y&&tp.x<=(coords.x+spriteWidth)&&tp.y<=(coords.y+spriteHeight)) {
                     console.log("Inside the box");
                     var canvasX = parseInt(tp.x - coords.x);
                     var canvasY = parseInt(tp.y - coords.y);

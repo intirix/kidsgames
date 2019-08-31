@@ -3,7 +3,6 @@ import QtQuick 2.0
 Rectangle {
     id: me
 
-    property int size: 200
     property url source: "qrc:/images/animals/whale.svg"
     property bool cloneItem: false
     property var cloneParent: parent
@@ -12,9 +11,24 @@ Rectangle {
     property var moveTarget: me
     property bool draggable: true
 
+    property int size: 200;
+    property int itemWidth: size;
+    property int itemHeight: size;
+
+    width: itemWidth;
+    height: itemHeight;
+
     color: "transparent"
-    width: size
-    height: size
+
+    onItemHeightChanged: {
+        console.log("DI height changed to "+itemHeight);
+        canvas.requestPaint();
+    }
+
+    onItemWidthChanged: {
+        console.log("DI width changed to "+itemWidth);
+        canvas.requestPaint();
+    }
 
     Component.onCompleted: {
         // if the item was declared with an area to belong to,
@@ -33,7 +47,7 @@ Rectangle {
     function getReference() {
         if (cloneItem) {
             var component = Qt.createComponent("DraggableItem.qml");
-            var obj = component.createObject(cloneParent, {"size": size, "source": source, "x": x, "y": y, "cloneItem": false});
+            var obj = component.createObject(cloneParent, {"itemWidth": me.itemWidth, "itemHeight": me.itemHeight, "source": source, "x": x, "y": y, "cloneItem": false});
 
             // don't draw the clone until we drag it a bit
             // this prevents a weird visual pop when first creating the item
@@ -59,8 +73,8 @@ Rectangle {
             maxY = parent.height;
         }
 
-        var width = maxX - minX - size;
-        var height = maxY - minY - size;
+        var width = maxX - minX - me.itemWidth;
+        var height = maxY - minY - me.itemHeight;
         var offsetX = Math.random() * width;
         var offsetY = Math.random() * height;
         me.x = parseInt(minX + offsetX);
@@ -74,7 +88,7 @@ Rectangle {
         visible: false
         onStatusChanged: {
             if (refImage.status==Image.Ready) {
-                console.log(source+" is ready");
+                console.log(source+" is ready, source is "+refImage.width+"x"+refImage.height);
                 canvas.loadImage(source);
                 canvas.requestPaint();
             }
@@ -84,24 +98,32 @@ Rectangle {
 
     Canvas {
         id: canvas
-        width: size
-        height: size
-
-        property var xScale: (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height)
-        property var yScale: (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width)
+        width: me.itemWidth;
+        height: me.itemHeight;
 
         Component.onCompleted: {
             loadImage(source);
         }
 
         onPaint: {
+            console.log("paint("+width+"x"+height+")");
             var ctx = getContext("2d");
             if (refImage.status==Image.Ready) {
-                var xScale = (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height);
-                var yScale = (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width);
-                console.log("Drawing "+source);
-                ctx.clearRect(0,0,size,size);
-                ctx.drawImage(refImage,0,0, xScale, yScale);
+
+
+                if (itemHeight==itemWidth) {
+                    var xScale = (refImage.width>refImage.height)?(width):(width*refImage.width/refImage.height);
+                    var yScale = (refImage.height>refImage.width)?(height):(height*refImage.height/refImage.width);
+                    console.log("Drawing "+source+", square scale=["+xScale+","+yScale+"]");
+                    ctx.clearRect(0,0,me.width,me.height);
+                    ctx.drawImage(refImage,0,0, xScale, yScale);
+                } else {
+                    xScale = itemWidth / refImage.width;
+                    yScale = itemHeight / refImage.height;
+                    console.log("Drawing "+source+", rect scale=["+itemWidth+","+itemHeight+"]");
+                    ctx.clearRect(0,0,me.width,me.height);
+                    ctx.drawImage(refImage,0,0, itemWidth, itemHeight);
+                }
             } else {
                 console.log("Skipping draw because "+source+" is not ready");
             }
