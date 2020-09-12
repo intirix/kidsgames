@@ -31,3 +31,6 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 HEADERS += \
     qrccache.h
+
+ANDROID_ABIS = armeabi-v7a
+
