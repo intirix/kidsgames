@@ -9,6 +9,12 @@ Rectangle {
     property int treeSize: squareSize * 8 / 10;
     property int ballSize: squareSize * 1 / 10;
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/christmasTree/howto.ogg";
+        playOnLoad: true;
+    }
+
     Image {
         height: treeSize
         width: treeSize * 1.2 // fatten the tree a bit

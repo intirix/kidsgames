@@ -5,17 +5,40 @@ import KidGames 1.0
 Item {
 
     property string qrcPath: "";
-    QrcCache {
-        id: soundCache;
-        source: qrcPath;
-    }
+    property bool playOnLoad: false;
 
     Audio {
         id: audioClip
-        source: "file:"+soundCache.path
+        source: "";
+    }
+
+    QrcCache {
+        id: soundCache;
+        source: qrcPath;
+
+        onPathChanged: {
+            audioClip.source = "file:"+path;
+            console.log("Path has changed to "+source+" -> "+path);
+            if (playOnLoad && path!="") {
+                timer.start();
+            }
+        }
     }
 
     function play() {
+        console.log("Playing ["+audioClip.source+"]");
         audioClip.play();
+    }
+
+    Timer {
+        id: timer;
+        interval: 300;
+        repeat: false;
+        running: false;
+
+        onTriggered: {
+            play();
+        }
+
     }
 }

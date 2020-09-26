@@ -24,6 +24,12 @@ Rectangle {
         "qrc:/sortAnimals/turtle.svg",
     ]
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/counting/howto-counting.ogg";
+        playOnLoad: true;
+    }
+
     Item {
         anchors.top: parent.top
         anchors.bottom: parent.verticalCenter

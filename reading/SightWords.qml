@@ -26,6 +26,12 @@ Rectangle {
         currentWord = txt;
     }
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/reading/howto-sight-words.ogg";
+        playOnLoad: true;
+    }
+
     Text {
         id: textView
         color: "#ffffff"

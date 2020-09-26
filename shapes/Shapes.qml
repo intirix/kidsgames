@@ -36,6 +36,12 @@ Rectangle {
         currentColor = colorList[rnum];
     }
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/shapes/howto.ogg";
+        playOnLoad: true;
+    }
+
     Text {
         id: textView
         color: currentColor

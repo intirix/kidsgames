@@ -38,6 +38,11 @@ Rectangle {
 
     property var animals: []
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/counting/howto-boxes.ogg";
+        playOnLoad: true;
+    }
 
     Storage {
         id: storage

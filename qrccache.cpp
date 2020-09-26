@@ -39,6 +39,7 @@ void QrcCache::setSource(const QString &source) {
             qInfo() << "Cache file " << qrcFileName << " creation failed";
         }
     } else {
+        qInfo() << "Cache file " << qrcFileName << " already exists";
         m_path = qrcFileName;
         emit pathChanged();
     }

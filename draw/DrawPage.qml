@@ -23,6 +23,12 @@ Rectangle {
         lineWidth: squareSize / 200
     }
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/draw/howto.ogg";
+        playOnLoad: true;
+    }
+
     BackButton {
         stackRef: stack
     }

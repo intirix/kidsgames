@@ -9,6 +9,11 @@ Rectangle {
     property int rulerMarks: 6
     property int rulerMarkWidth: me.width / 100
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/ruler/howto.ogg";
+        playOnLoad: true;
+    }
 
     BackButton {
         id: backButton

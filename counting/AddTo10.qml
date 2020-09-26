@@ -7,6 +7,12 @@ Rectangle {
 
     property int squareSize: Math.min(parent.height,parent.width)
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/counting/howto-add.ogg";
+        playOnLoad: true;
+    }
+
     BackButton {
         id: backButton
         stackRef: stack

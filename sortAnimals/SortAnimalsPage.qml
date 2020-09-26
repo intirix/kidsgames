@@ -92,6 +92,12 @@ Rectangle {
 
     }
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/sortAnimals/howto.ogg";
+        playOnLoad: true;
+    }
+
     DraggableItemDestination {
         area: area
         anchors.right: parent.horizontalCenter

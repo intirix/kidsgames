@@ -24,6 +24,7 @@ Rectangle {
     SoundClip {
         id: howToClip;
         qrcPath: ":/matchBallNet/howto.ogg";
+        playOnLoad: true;
     }
 
     DraggableItemArea {
@@ -193,6 +194,5 @@ Rectangle {
             createBall("basketball.svg","BASKETBALL");
             createBall("football.svg","FOOTBALL");
         }
-        howToClip.play();
     }
 }

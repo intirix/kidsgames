@@ -13,6 +13,12 @@ Rectangle {
 
     property var lastSelected: null
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/colorSoundBoard/howto.ogg";
+        playOnLoad: true;
+    }
+
     BackButton {
         id: backButton
         stackRef: stack

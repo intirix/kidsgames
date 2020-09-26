@@ -18,6 +18,12 @@ Rectangle {
 
     property var boxes: []
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/arrows/howto.ogg";
+        playOnLoad: true;
+    }
+
     function goUp() {
         if (tokenY > 0) {
             tokenY--;
