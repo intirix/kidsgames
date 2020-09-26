@@ -19,3 +19,9 @@ If you have any ideas for new games or improvements on these games, feel free to
 This app uses images from multiple sources.  All copyrights are honored and all images have an attribution in the Info page of the app.
 
 The app runs on Linux, Windows and Android.  It is designed for bigger screens.
+
+Privacy Policy:
+https://github.com/intirix/kidsgames/blob/master/privacy-policy.md
+
+Terms and Conditions:
+https://github.com/intirix/kidsgames/blob/master/TOC.md
