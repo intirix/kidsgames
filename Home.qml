@@ -77,10 +77,18 @@ Rectangle {
 
                     }
 
+                    SoundClip {
+                        id: tipClip;
+                        qrcPath: soundTip;
+                    }
+
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
                             stack.push(Qt.resolvedUrl(appUrl));
+                        }
+                        onPressAndHold: {
+                            tipClip.play();
                         }
                     }
 

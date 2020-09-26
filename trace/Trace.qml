@@ -1,5 +1,7 @@
 import QtQuick 2.7
+import QtMultimedia 5.7
 import "qrc:/components"
+import KidGames 1.0
 
 Rectangle {
     id: page
@@ -10,6 +12,21 @@ Rectangle {
     property string traceText: "M"
 
     color: "#000000"
+
+    SoundClip {
+        id: howToClipUpper;
+        qrcPath: ":/trace/howto-trace.ogg";
+    }
+
+    SoundClip {
+        id: howToClipLower;
+        qrcPath: ":/trace/howto-trace-lower.ogg";
+    }
+
+    SoundClip {
+        id: howToClipNumber;
+        qrcPath: ":/trace/howto-trace-numbers.ogg";
+    }
 
     Storage {
         id: storage
@@ -166,16 +183,13 @@ Rectangle {
                     page.state = "NUMBER";
                     clearLines();
                     setText(randomLetter());
-
                 } else {
                     page.state = "UPPER";
                     clearLines();
                     setText(randomLetter());
-
                 }
                 storage.setItem("pages.traceLetters.mode",page.state);
-
-//                page.state = ( page.state == "UPPER" ? "LOWER" : "UPPER" );
+                playHowto();
             }
         }
     }
@@ -196,5 +210,17 @@ Rectangle {
         }
     }
 
+    Component.onCompleted: {
+        playHowto();
+    }
 
+    function playHowto() {
+        if (page.state==="UPPER") {
+            howToClipUpper.play();
+        } else if (page.state=="LOWER") {
+            howToClipLower.play();
+        } else {
+            howToClipNumber.play();
+        }
+    }
 }

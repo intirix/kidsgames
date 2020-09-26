@@ -49,24 +49,32 @@
         <file alias="redorb-9.png">images/redorb/redorb-9.png</file>
     </qresource>
     <qresource prefix="/trace">
+        <file alias="howto-trace.ogg">trace/howto-trace.ogg</file>
+        <file alias="howto-trace-numbers.ogg">trace/howto-trace-numbers.ogg</file>
+        <file alias="howto-trace-lower.ogg">trace/howto-trace-lower.ogg</file>
         <file alias="Trace.qml">trace/Trace.qml</file>
         <file alias="TraceSelect.qml">trace/TraceSelect.qml</file>
         <file alias="TraceCapitolLetterModel.qml">trace/TraceCapitolLetterModel.qml</file>
         <file alias="TraceNumberModel.qml">trace/TraceNumberModel.qml</file>
     </qresource>
     <qresource prefix="/reading">
+        <file alias="howto-similar.ogg">reading/howto-similar.ogg</file>
+        <file alias="howto-sight-words.ogg">reading/howto-sight-words.ogg</file>
         <file alias="SightWords.qml">reading/SightWords.qml</file>
         <file alias="SimilarWords.qml">reading/SimilarWords.qml</file>
         <file alias="eye.png">reading/eye.png</file>
     </qresource>
     <qresource prefix="/shapes">
+        <file alias="howto.ogg">shapes/howto.ogg</file>
         <file alias="Shapes.qml">shapes/Shapes.qml</file>
         <file alias="multiply-icon.png">shapes/multiply-icon.png</file>
     </qresource>
     <qresource prefix="/arrows">
+        <file alias="howto.ogg">arrows/howto.ogg</file>
         <file alias="Directions.qml">arrows/Directions.qml</file>
     </qresource>
     <qresource prefix="/draw">
+        <file alias="howto.ogg">draw/howto.ogg</file>
         <file alias="DrawPage.qml">draw/DrawPage.qml</file>
     </qresource>
     <qresource prefix="/components">
@@ -80,12 +88,15 @@
         <file alias="DraggableItemDestination.qml">components/DraggableItemDestination.qml</file>
         <file>InfoButton.qml</file>
         <file alias="Storage.qml">components/Storage.qml</file>
+        <file alias="SoundClip.qml">components/SoundClip.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
-        <file>ColorSoundBoardPage.qml</file>
-        <file>ColorSoundModel.qml</file>
+        <file alias="howto.ogg">colorSoundBoard/howto.ogg</file>
+        <file alias="ColorSoundBoardPage.qml">colorSoundBoard/ColorSoundBoardPage.qml</file>
+        <file alias="ColorSoundModel.qml">colorSoundBoard/ColorSoundModel.qml</file>
     </qresource>
     <qresource prefix="/sortAnimals">
+        <file alias="howto.ogg">sortAnimals/howto.ogg</file>
         <file alias="icon.png">sortAnimals/icon.png</file>
         <file alias="SortAnimalsPage.qml">sortAnimals/SortAnimalsPage.qml</file>
         <file alias="fish.svg">sortAnimals/fish.svg</file>
@@ -104,6 +115,7 @@
         <file alias="crocodile.svg">sortAnimals/crocodile.svg</file>
     </qresource>
     <qresource prefix="/christmasTree">
+        <file alias="howto.ogg">christmasTree/howto.ogg</file>
         <file alias="ChristmasTreePage.qml">christmasTree/ChristmasTreePage.qml</file>
         <file alias="icon.png">christmasTree/icon.png</file>
         <file alias="tree1.svg">christmasTree/tree1.svg</file>
@@ -129,6 +141,7 @@
         <file alias="goodjob.ogg">speech/goodjob.ogg</file>
     </qresource>
     <qresource prefix="/matchBallNet">
+        <file alias="howto.ogg">matchBallNet/howto.ogg</file>
         <file alias="baseball.svg">matchBallNet/baseball.svg</file>
         <file alias="baseball-diamond.svg">matchBallNet/baseball-diamond.svg</file>
         <file alias="soccerball.svg">matchBallNet/soccerball.svg</file>
@@ -140,13 +153,22 @@
         <file alias="MatchBallGoals.qml">matchBallNet/MatchBallGoals.qml</file>
     </qresource>
     <qresource prefix="/ruler">
+        <file alias="howto.ogg">ruler/howto.ogg</file>
         <file alias="icon.png">ruler/icon.png</file>
         <file alias="Ruler.qml">ruler/Ruler.qml</file>
     </qresource>
     <qresource prefix="/counting">
+        <file alias="howto-counting.ogg">counting/howto-counting.ogg</file>
+        <file alias="howto-boxes.ogg">counting/howto-boxes.ogg</file>
+        <file alias="howto-add.ogg">counting/howto-add.ogg</file>
         <file alias="icon.png">counting/icon.png</file>
         <file alias="SimpleCounting.qml">counting/SimpleCounting.qml</file>
         <file alias="Add.qml">counting/Add.qml</file>
         <file alias="AddTo10.qml">counting/AddTo10.qml</file>
+    </qresource>
+    <qresource prefix="/info">
+        <file alias="credits.ogg">info/credits.ogg</file>
+        <file alias="hide-games.ogg">info/hide-games.ogg</file>
+        <file alias="quit.ogg">info/quit.ogg</file>
     </qresource>
 </RCC>

@@ -1,5 +1,7 @@
 import QtQuick 2.7
+import QtMultimedia 5.7
 import "qrc:/components"
+import KidGames 1.0
 
 Rectangle {
     id: me
@@ -19,6 +21,10 @@ Rectangle {
 
     property var items: []
 
+    SoundClip {
+        id: howToClip;
+        qrcPath: ":/matchBallNet/howto.ogg";
+    }
 
     DraggableItemArea {
         id: area
@@ -187,5 +193,6 @@ Rectangle {
             createBall("basketball.svg","BASKETBALL");
             createBall("football.svg","FOOTBALL");
         }
+        howToClip.play();
     }
 }

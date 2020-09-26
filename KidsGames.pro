@@ -17,6 +17,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    TOC.md \
     android/AndroidManifest.xml \
     android/gradle/wrapper/gradle-wrapper.jar \
     android/gradlew \
@@ -25,7 +26,8 @@ DISTFILES += \
     android/gradle/wrapper/gradle-wrapper.properties \
     android/gradlew.bat \
     images.txt \
-    packaging.txt
+    packaging.txt \
+    privacy-policy.md
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
