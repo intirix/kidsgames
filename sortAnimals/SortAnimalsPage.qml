@@ -86,8 +86,10 @@ Rectangle {
         if (matched) {
             console.log("Correctly dropped "+filename2);
             item.visible = false;
+            effects.playCorrectEffect();
         } else {
             console.log("Incorrectly dropped "+filename2);
+            effects.playIncorrectEffect();
         }
 
     }
@@ -96,6 +98,10 @@ Rectangle {
         id: howToClip;
         qrcPath: ":/sortAnimals/howto.ogg";
         playOnLoad: true;
+    }
+
+    SoundEffects {
+        id: effects;
     }
 
     DraggableItemDestination {

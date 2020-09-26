@@ -27,6 +27,7 @@ Rectangle {
 
     Component.onCompleted: {
         model.clear();
+        var credits = credits_images + "\n\n" + credits_sounds;
         var items = credits.split("\n\n");
         for (var i = 0; i < items.length; i++ ) {
             console.log(items[i]);

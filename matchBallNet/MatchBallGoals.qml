@@ -27,6 +27,10 @@ Rectangle {
         playOnLoad: true;
     }
 
+    SoundEffects {
+        id: effects;
+    }
+
     DraggableItemArea {
         id: area
     }
@@ -152,8 +156,10 @@ Rectangle {
         console.log("Tried to drop "+item.metadata+" onto "+dest);
         if (item.metadata === dest) {
             item.visible = false;
+            effects.playCorrectEffect();
         } else {
             item.visible = true;
+            effects.playIncorrectEffect();
         }
     }
 

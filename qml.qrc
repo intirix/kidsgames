@@ -5,6 +5,7 @@
         <file>AppModel.qml</file>
         <file>Home.qml</file>
         <file>images.txt</file>
+        <file>sounds.txt</file>
         <file>InfoPage.qml</file>
         <file>DisableApps.qml</file>
     </qresource>
@@ -89,6 +90,7 @@
         <file>InfoButton.qml</file>
         <file alias="Storage.qml">components/Storage.qml</file>
         <file alias="SoundClip.qml">components/SoundClip.qml</file>
+        <file alias="SoundEffects.qml">components/SoundEffects.qml</file>
     </qresource>
     <qresource prefix="/colorSoundBoard">
         <file alias="howto.ogg">colorSoundBoard/howto.ogg</file>
@@ -170,5 +172,9 @@
         <file alias="credits.ogg">info/credits.ogg</file>
         <file alias="hide-games.ogg">info/hide-games.ogg</file>
         <file alias="quit.ogg">info/quit.ogg</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file alias="incorrect.mp3">sounds/incorrect.mp3</file>
+        <file alias="correct.ogg">sounds/correct.ogg</file>
     </qresource>
 </RCC>
