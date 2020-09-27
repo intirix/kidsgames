@@ -18,6 +18,10 @@ Rectangle {
         stackRef: stack
     }
 
+    SoundEffects {
+        id: reader;
+    }
+
     Image {
         id: restartButton
         source: "/images/restart.png"
@@ -66,6 +70,8 @@ Rectangle {
         if (left<1) {
             left = 1;
         }
+
+        reader.prepareExternalClip("https://t0hatr9ymk.execute-api.us-east-1.amazonaws.com/prod/v1/voice?type=add&l="+left+"&r="+(10-left));
 
         textViewFormula.text = left + " + _ = 10";
     }

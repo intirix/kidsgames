@@ -44,6 +44,10 @@ Rectangle {
         playOnLoad: true;
     }
 
+    SoundEffects {
+        id: reader;
+    }
+
     Storage {
         id: storage
     }
@@ -283,6 +287,21 @@ Rectangle {
         }
     }
 
+    Image {
+        id: hearButton
+        source: "/images/play.png"
+        width: backButton.buttonSize
+        height: backButton.buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: difficultyButton.left;
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                reader.playPreparedClip();
+            }
+        }
+    }
 
     Text {
         id: textViewFormula
@@ -353,6 +372,7 @@ Rectangle {
                 right = 1;
             }
             textViewFormula.text = left + " + " + right + " =";
+            reader.prepareVoice("type=add&l="+left+"&r="+right);
         } else if (mode==="medium") {
             textViewFormula.visible = true;
             countingArea.visible = false;
@@ -368,6 +388,7 @@ Rectangle {
                 right = 1;
             }
             textViewFormula.text = left + " + " + right + " =";
+            reader.prepareVoice("type=add&l="+left+"&r="+right);
         } else if (mode==="hard") {
             textViewFormula.visible = true;
             countingArea.visible = false;
@@ -383,6 +404,7 @@ Rectangle {
                 right = 1;
             }
             textViewFormula.text = left + " + " + right + " =";
+            reader.prepareVoice("type=add&l="+left+"&r="+right);
         } else if (mode==="animals") {
             textViewFormula.visible = false;
             countingArea.visible = true;
@@ -494,6 +516,8 @@ Rectangle {
         }
         leftSum.text = ""+countLeft;
         rightSum.text = ""+countRight;
+
+        reader.prepareVoice("type=add&l="+countLeft+"&r="+countRight);
 
     }
 

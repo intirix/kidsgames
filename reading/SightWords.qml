@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import "qrc:/components"
+import QtMultimedia 5.7
 
 Rectangle {
     id: page
@@ -24,12 +25,17 @@ Rectangle {
 
     function setText(txt) {
         currentWord = txt;
+        reader.prepareExternalClip("https://t0hatr9ymk.execute-api.us-east-1.amazonaws.com/prod/v1/voice?type=word&word="+txt);
     }
 
     SoundClip {
         id: howToClip;
         qrcPath: ":/reading/howto-sight-words.ogg";
         playOnLoad: true;
+    }
+
+    SoundEffects {
+        id: reader;
     }
 
     Text {
@@ -63,6 +69,22 @@ Rectangle {
             anchors.fill: parent
             onClicked: {
                 setText(randomWord());
+            }
+        }
+    }
+
+    Image {
+        id: hearButton
+        source: "/images/play.png"
+        width: buttonSize
+        height: buttonSize
+        anchors.bottom: parent.bottom
+        anchors.right: randomButton.left;
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                reader.playPreparedClip();
             }
         }
     }

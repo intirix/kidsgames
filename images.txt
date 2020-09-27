@@ -103,7 +103,14 @@ right.png
 http://www.iconarchive.com/show/100-flat-2-icons-by-graphicloads/arrow-next-3-icon.html
 http://graphicloads.com/
 
+speaker.png
+https://iconarchive.com/show/beautiful-flat-one-color-icons-by-elegantthemes/speaker-icon.html
+Artist: Elegantthemes
+License: GNU General Public License
 
+play.png
+https://iconarchive.com/show/100-flat-icons-by-graphicloads/play-icon.html
+http://graphicloads.com/
 
 
 

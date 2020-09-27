@@ -32,6 +32,8 @@
         <file alias="dollar.png">images/dollar.png</file>
         <file alias="settings.png">images/settings.png</file>
         <file alias="message.png">images/message.png</file>
+        <file alias="speaker.png">images/speaker.png</file>
+        <file alias="play.png">images/play.png</file>
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>
