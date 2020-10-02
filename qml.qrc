@@ -8,6 +8,8 @@
         <file>sounds.txt</file>
         <file>InfoPage.qml</file>
         <file>DisableApps.qml</file>
+        <file>privacy-policy.md</file>
+        <file>PrivacyPolicy.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="back.png">images/back.png</file>
@@ -34,6 +36,7 @@
         <file alias="message.png">images/message.png</file>
         <file alias="speaker.png">images/speaker.png</file>
         <file alias="play.png">images/play.png</file>
+        <file alias="privacy-policy.png">images/privacy-policy.png</file>
     </qresource>
     <qresource prefix="/images/animals">
         <file alias="whale.svg">images/animals/whale.svg</file>

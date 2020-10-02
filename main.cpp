@@ -5,15 +5,13 @@
 
 #include "qrccache.h"
 
-int main(int argc, char *argv[])
+void load_file(QQmlApplicationEngine &engine, const char *filename, const char *prop)
 {
-    QGuiApplication app(argc, argv);
-
-    QFile mFile(":/images.txt");
+    QFile mFile(filename);
 
     if(!mFile.open(QFile::ReadOnly | QFile::Text)){
         qDebug() << "could not open file for read";
-        return 0;
+        return;
     }
 
     QTextStream in(&mFile);
@@ -22,29 +20,23 @@ int main(int argc, char *argv[])
     //qDebug() << mText;
 
     mFile.close();
+    engine.rootContext()->setContextProperty(prop,mText);
 
-   QFile mFile2(":/sounds.txt");
+}
 
-    if(!mFile2.open(QFile::ReadOnly | QFile::Text)){
-        qDebug() << "could not open file for read";
-        return 0;
-    }
-
-    QTextStream in2(&mFile2);
-    QString mText2 = in2.readAll();
-
-    //qDebug() << mText;
-
-    mFile2.close();
-
+int main(int argc, char *argv[])
+{
+    QGuiApplication app(argc, argv);
 
     qmlRegisterType<QrcCache>("KidGames", 1, 0, "QrcCache");
 
     app.setWindowIcon(QIcon("qrc:/images/app.png"));
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("credits_images",mText);
-    engine.rootContext()->setContextProperty("credits_sounds",mText2);
+    engine.rootContext()->setContextProperty("privacy_policy_md","[Link to the Privacy Policy](https://github.com/intirix/kidsgames/blob/master/privacy-policy.md)");
+    load_file(engine, ":/images.txt", "credits_images");
+    load_file(engine, ":/sounds.txt", "credits_sounds");
+    load_file(engine, ":/privacy-policy.md", "privacy_policy_md");
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

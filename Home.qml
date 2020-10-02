@@ -9,17 +9,13 @@ Rectangle {
     property int buttonSize: squareSize/4
     property int buttonHeight: buttonSize * 12 / 10
     property int buttonWidth: buttonSize * 11 / 10
+    property int otherButtomSize: squareSize / 12;
 
     ExitButton {
         id: exitButton
         anchors.right: parent.right
     }
 
-    InfoButton {
-        id: infoButton
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
-    }
 
     Image {
         id: settingsButton
@@ -105,17 +101,56 @@ Rectangle {
         id: realModel;
     }
 
-    GridView {
-        width: parent.width
-        anchors.top: exitButton.bottom
-        anchors.bottom: infoButton.top
+    Rectangle {
+        color: "transparent";
+        width: parent.width;
+        anchors.top: parent.top;
+        anchors.bottom: parent.bottom;
+        anchors.bottomMargin: otherButtomSize;
+        anchors.topMargin: otherButtomSize;
+        GridView {
+            anchors.fill: parent;
 
-        cellHeight: buttonHeight
-        cellWidth: buttonWidth
+            cellHeight: buttonHeight
+            cellWidth: buttonWidth
 
-        model: realModel;
-        delegate: gridDelegate
+            model: realModel;
+            delegate: gridDelegate
+        }
     }
+
+    Rectangle {
+        color: "black";
+        width: parent.width;
+        height: otherButtomSize + 10;
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        InfoButton {
+            id: infoButton
+            width: otherButtomSize;
+            height: otherButtomSize;
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+        }
+        Rectangle {
+            color: "transparent";
+            width: otherButtomSize;
+            height: otherButtomSize;
+            anchors.left: infoButton.right;
+            anchors.bottom: parent.bottom;
+            Image {
+                source: "/images/privacy-policy.png"
+                anchors.fill: parent;
+            }
+            MouseArea {
+                anchors.fill: parent;
+                onClicked: {
+                    stack.push(Qt.resolvedUrl("qrc:/PrivacyPolicy.qml"));
+                }
+            }
+        }
+    }
+
 
     Storage {
         id: storage
