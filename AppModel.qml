@@ -59,6 +59,13 @@ ListModel {
         soundTip: ":/christmasTree/howto.ogg";
     }
     ListElement {
+        appName: "Halloween"
+        appIcon: "/halloween/halloween.png"
+        appUrl: "qrc:/halloween/HalloweenDecorationsPage.qml"
+        appKey: "halloween";
+        soundTip: ":/halloween/howto.ogg";
+    }
+    ListElement {
         appName: "Match Balls"
         appIcon: "/matchBallNet/basketball.svg"
         appUrl: "qrc:/matchBallNet/MatchBallGoals.qml"

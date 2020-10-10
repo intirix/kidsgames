@@ -173,6 +173,21 @@
         <file alias="Add.qml">counting/Add.qml</file>
         <file alias="AddTo10.qml">counting/AddTo10.qml</file>
     </qresource>
+    <qresource prefix="/halloween">
+        <file alias="HalloweenDecorationsPage.qml">halloween/HalloweenDecorationsPage.qml</file>
+        <file alias="tombstone.png">halloween/tombstone.png</file>
+        <file alias="pumpkin.png">halloween/pumpkin.png</file>
+        <file alias="spider.png">halloween/spider.png</file>
+        <file alias="skull.png">halloween/skull.png</file>
+        <file alias="witch.png">halloween/witch.png</file>
+        <file alias="web.png">halloween/web.png</file>
+        <file alias="ghost.png">halloween/ghost.png</file>
+        <file alias="halloween.png">halloween/halloween.png</file>
+        <file alias="howto.ogg">halloween/howto.ogg</file>
+        <file alias="background.jpg">halloween/background.jpg</file>
+        <file alias="background-fullmoon.jpg">halloween/background-fullmoon.jpg</file>
+        <file alias="background-forest.jpg">halloween/background-forest.jpg</file>
+    </qresource>
     <qresource prefix="/info">
         <file alias="credits.ogg">info/credits.ogg</file>
         <file alias="hide-games.ogg">info/hide-games.ogg</file>
